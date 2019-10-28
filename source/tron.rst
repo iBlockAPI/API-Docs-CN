@@ -4,15 +4,15 @@ getNowBlock
 ```````````
 Query the latest block
 
-Definition::
+定义::
 
     GET /trx/getNowBlock/
     
-Example Request::
+请求示例::
 
     GET /trx/getNowBlock/
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -105,15 +105,15 @@ getBlockByNum
 ```````````
 Query block by height
 
-Definition::
+定义::
 
     GET /trx/getBlockByNum?num={int}
     
-Example Request::
+请求示例::
 
     GET /trx/getNowBlock?num=1234
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -206,15 +206,15 @@ getBlockById
 ```````````
 Query block by ID(hash)
 
-Definition::
+定义::
 
     GET /trx/getBlockById?id={hash}
     
-Example Request::
+请求示例::
 
     GET /trx/getBlockById?id=0000000000d355af382b789f7870b0504206fb212cd6bac078b8d89e2ede0ee5 
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -307,15 +307,15 @@ queryTransactionByTxHash
 ```````````
 Query transaction based on hash
 
-Definition::
+定义::
 
     GET /trx/queryTransactionByTxHash?hash={hash}
     
-Example Request::
+请求示例::
 
     GET /trx/queryTransactionByTxHash?hash=92fb8d12daf58b30d1bb32b40549ea81484fca4f8b9f18f5f77888766b32d92b 
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -358,15 +358,15 @@ queryTransactioninfoByHash
 ```````````
 Query transaction fee based on hash
 
-Definition::
+定义::
 
     GET /trx/queryTransactioninfoByHash?hash={hash}
     
-Example Request::
+请求示例::
 
     GET /trx/queryTransactioninfoByHash?hash=92fb8d12daf58b30d1bb32b40549ea81484fca4f8b9f18f5f77888766b32d92b 
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -391,15 +391,15 @@ validateAddress
 ```````````
 Verifies that the address is a correct TRX address
 
-Definition::
+定义::
 
     GET /trx/validateAddress?address={address}
     
-Example Request::
+请求示例::
 
     GET /trx/validateAddress?address=TAUN6FwrnwwmaEqYcckffC7wYmbaS6cBiX 
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -413,15 +413,15 @@ getAccount
 ```````````
 Query information about an account
 
-Definition::
+定义::
 
     GET /trx/getAccount?address={address}
     
-Example Request::
+请求示例::
 
     GET /trx/getAccount?address=TAUN6FwrnwwmaEqYcckffC7wYmbaS6cBiX 
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -465,15 +465,15 @@ getAccountNet
 ```````````
 Query bandwidth information about an account
 
-Definition::
+定义::
 
     GET /trx/getAccountNet?address={address}
     
-Example Request::
+请求示例::
 
     GET /trx/getAccountNet?address=TAUN6FwrnwwmaEqYcckffC7wYmbaS6cBiX 
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -502,15 +502,15 @@ getAssetIssueById
 ```````````
 Query token information by id
 
-Definition::
+定义::
 
     GET /trx/getAssetIssueById?id={id}
     
-Example Request::
+请求示例::
 
     GET /trx/getAssetIssueById?id=1000025 
 
-Response:
+返回:
 
 .. code-block:: json
 

@@ -4,15 +4,15 @@ getbestblockhash
 ```````````
 Returns the hash of the best (tip) block in the longest block chain.
 
-Definition::
+定义::
 
     GET /dash/getBestBlockHash/
 
-Example Request::
+请求示例::
 
     GET /dash/getBestBlockHash/
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -53,15 +53,15 @@ Return:
     "nextblockhash" : "hash"       (string) The hash of the next block
  }
 
-Definition::
+定义::
 
     GET /dash/getBlockByHash?hash={hash}    //hash (string) 
 
-Example Request::
+请求示例::
 
     GET /dash/getBlockByHash?hash=000000000000002056c37f7d57864341be0cc01b79c7dfb68350abd831bb50d7
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -138,14 +138,14 @@ Return:
     "nextblockhash" : "hash"       (string) The hash of the next block
     }
 
-Definition::
+定义::
 
     GET /dash/getBlockByHeight?height={height}   //height (Integer)
-Example Request::
+请求示例::
 
     GET /dash/getBlockByHeight?height=1158713
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -235,14 +235,14 @@ Return:
     }
  }
 
-Definition::
+定义::
 
     GET /dash/getBlockChainInfo
-Example Request::
+请求示例::
 
     GET /dash/getBlockChainInfo
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -325,14 +325,14 @@ getBlockCount
 ```````````
 Returns the number of blocks in the longest blockchain
 
-Definition::
+定义::
 
     GET /dash/getBlockCount
-Example Request::
+请求示例::
 
     GET /dash/getBlockCount
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -346,14 +346,14 @@ getBlockHash
 ```````````
 Returns hash of block in best-block-chain at height provided
 
-Definition::
+定义::
 
     GET /dash/getBlockHash?heighth={height}
-Example Request::
+请求示例::
 
     GET /dash/getBlockHash?heighth=6666
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -367,14 +367,14 @@ getDifficulty
 ```````````
 Returns the proof-of-work difficulty as a multiple of the minimum difficulty
 
-Definition::
+定义::
 
     GET /dash/getDifficulty
-Example Request::
+请求示例::
 
     GET /dash/getDifficulty
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -391,14 +391,14 @@ Returns all transaction ids in memory pool as a json array of string transaction
 
 Hint: use getmempoolentry to fetch a specific transaction from the mempool
 
-Definition::
+定义::
 
     GET /dash/getRawMemPool
-Example Request::
+请求示例::
 
     GET /dash/getRawMemPool
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -448,14 +448,14 @@ Result:
   "coinbase" : true|false   (boolean) Coinbase or not
  }
 
-Definition::
+定义::
 
     GET /dash/gettxout?hash={hash}&vouth={vouth}&unconfirmed={unconfirmed}
-Example Request::
+请求示例::
 
     GET /dash/gettxout?hash=xxx&vouth=1&unconfirmed=false
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -501,14 +501,14 @@ Result:
     "total_amount": x.xxx          (numeric) The total amount
   }
 
-Definition::
+定义::
 
     GET /dash/getTxOutSetInfo
-Example Request::
+请求示例::
 
     GET /dash/getTxOutSetInfo
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -533,14 +533,14 @@ verifyChain
 ```````````
 Verifies blockchain database
 
-Definition::
+定义::
 
     GET /dash/verifyChain
-Example Request::
+请求示例::
 
     GET /dash/verifyChain
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -560,14 +560,14 @@ Params:
 
 2. nblocks      (numeric, optional, default=6, 0=all) The number of blocks to check
 
-Definition::
+定义::
 
     GET /dash/verifyChainByParam?checkLevel={checkLevel}&numOfBlocks={numOfBlocks}
-Example Request::
+请求示例::
 
     GET /dash/verifyChainByParam?checkLevel=3&numOfBlocks=6
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -602,14 +602,14 @@ Result:
     "redeemScript":"script"       (string) The string value of the hex-encoded redemption script
   }
 
-Definition::
+定义::
 
     GET /dash/createMultiSig?nRequired={nRequired}&keys={nRequired}
 Example Request:
 
     GET /dash/createMultiSig?nRequired=6&keys=xxxxxxxxxxxxxxxxx
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -644,14 +644,14 @@ Result:
     "blocks" : n         (numeric) block number where estimate was found
   }
 
-Definition::
+定义::
 
     GET /dash/estimateSmartFee?blocks={blocks}
 Example Request:
 
     GET /dash/estimateSmartFee?blocks=1
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -672,14 +672,14 @@ validateAddress
 ```````````
 Return information about the given bitcoin address
 
-Definition::
+定义::
 
     GET /dash/validateAddress?address={address}
 Example Request:
 
     GET /dash/validateAddress?address=3LwxH2frucsDJfFainnKKGonJduHXesXAD
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -704,14 +704,14 @@ Params
 3. "message"         (string, required) The message that was signed
 
 
-Definition::
+定义::
 
     GET /dash/verifyMessage?address={address}&signature={signature}&message={message}
 Example Request:
 
     GET /dash/verifyMessage?address=xxxxxxxx&signature=xxxxxxxx&message=xxxxxxxx
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -777,13 +777,13 @@ Return:
     "chainlock" : true|false, (bool) The state of the corresponding block chainlock
  }
 
-Definition::
+定义::
 
     GET /dash/queryTransactionInfo?txId={txId}
 Example Request:
 
     GET /dash/queryTransactionInfo?txId=xxxxxxxxxxxx
-Response:
+返回:
 
 .. code-block:: json
 
@@ -860,14 +860,14 @@ Return:
     "nextblockhash" : "hash"       (string) The hash of the next block
     }
 
-Definition::
+定义::
 
     GET /dash/getBlockByHeight?height={height}   //height (Integer)
-Example Request::
+请求示例::
 
     GET /dash/getBlockByHeight?height=1158713
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -942,14 +942,14 @@ Return a JSON object representing the serialized, hex-encoded transaction.
 
 Also see createrawtransaction and signrawtransaction calls
 
-Definition::
+定义::
 
     GET /dash/decodeRawTransaction?hex={hex}
 Example Request:
 
     GET /dash/decodeRawTransaction?hex=xxxxxxxxxx
 
-Response:
+返回:
 
 .. code-block:: json
 

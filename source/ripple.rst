@@ -5,11 +5,11 @@ account_info
 `````````````````
 The account_info command retrieves information about an account, its activity, and its XRP balance. All information retrieved is relative to a particular version of the ledger.
 
-Definition::
+定义::
 
     POST /xrp/account_info
     
-Example Request::
+请求示例::
 
     curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{ \ 
         "account": "r9cZA1mLK5R5Am25ArfXFmqgNwjZgnfk59", \ 
@@ -18,7 +18,7 @@ Example Request::
         "queue": true \ 
         }' 'http://localhost:8080/xrp/account_info'
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -52,11 +52,11 @@ account_currencies
 `````````````````
 The account_currencies command retrieves a list of currencies that an account can send or receive, based on its trust lines. (This is not a thoroughly confirmed list, but it can be used to populate user interfaces.)
 
-Definition::
+定义::
 
     POST /xrp/account_currencies
     
-Example Request::
+请求示例::
 
     curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{ \ 
              "account": "r9cZA1mLK5R5Am25ArfXFmqgNwjZgnfk59", \ 
@@ -65,7 +65,7 @@ Example Request::
              "strict": true \ 
          }' 'http://localhost:8080/xrp/account_currencies'
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -108,11 +108,11 @@ account_tx
 `````````````````
 Retrieves a list of transactions that affected the specified account.
 
-Definition::
+定义::
 
     POST /xrp/account_tx
     
-Example Request::
+请求示例::
 
     curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{"account": "rQ3fNyLjbvcDaPNS4EAJY8aT9zR3uGk17c", \ 
         "ledger_index_min": -100, \ 
@@ -122,7 +122,7 @@ Example Request::
         "forward": false \ 
     }' 'http://localhost:8080/xrp/account_tx'
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -406,11 +406,11 @@ ledger
 `````````````````
 Retrieve information about the public ledger.
 
-Definition::
+定义::
 
     POST /xrp/ledger
     
-Example Request::
+请求示例::
 
     curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{"ledger_index": "validated", \ 
         "full": false, \ 
@@ -420,7 +420,7 @@ Example Request::
         "owner_funds": false \ 
     }' 'http://localhost:8080/xrp/ledger'
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -459,15 +459,15 @@ ledger_closed
 `````````````````
 Returns the unique identifiers of the most recently closed ledger. (This ledger is not necessarily validated and immutable yet.)
 
-Definition::
+定义::
 
     POST /xrp/ledger_closed
     
-Example Request::
+请求示例::
 
     curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' 'http://localhost:8080/xrp/ledger_closed'
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -487,15 +487,15 @@ ledger_current
 `````````````````
 The ledger_current method returns the unique identifiers of the current in-progress ledger. This command is mostly useful for testing, because the ledger returned is still in flux.
 
-Definition::
+定义::
 
     POST /xrp/ledger_current
     
-Example Request::
+请求示例::
 
     curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' 'http://localhost:8080/xrp/ledger_current'
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -514,11 +514,11 @@ ledger_data
 `````````````````
 The ledger_data method retrieves contents of the specified ledger. You can iterate through several calls to retrieve the entire contents of a single ledger version.
 
-Definition::
+定义::
 
     POST /xrp/ledger_data
     
-Example Request::
+请求示例::
 
     curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{ \ 
              "binary": true, \ 
@@ -526,7 +526,7 @@ Example Request::
              "limit": 5 \ 
          }' 'http://localhost:8080/xrp/ledger_data'
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -574,11 +574,11 @@ ledger_entry
 `````````````````
 The ledger_data method retrieves contents of the specified ledger. You can iterate through several calls to retrieve the entire contents of a single ledger version.
 
-Definition::
+定义::
 
     POST /xrp/ledger_entry
     
-Example Request::
+请求示例::
 
     curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{ \ 
                 "account_root": "r9cZA1mLK5R5Am25ArfXFmqgNwjZgnfk59", \ 
@@ -586,7 +586,7 @@ Example Request::
                 "type": "account_root" \ 
             }' 'http://localhost:8080/xrp/ledger_entry'
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -619,11 +619,11 @@ sign
 `````````````````
 The sign method takes a transaction in JSON format and a seed value, and returns a signed binary representation of the transaction. To contribute one signature to a multi-signed transaction, use the sign_for method instead.
 
-Definition::
+定义::
 
     POST /xrp/sign
     
-Example Request::
+请求示例::
 
     curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{ \ 
                 "offline": false, \ 
@@ -641,7 +641,7 @@ Example Request::
                 "fee_mult_max": 1000 \ 
             }' 'http://localhost:8080/xrp/sign'
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -676,11 +676,11 @@ sign_for
 `````````````````
 The sign_for command provides one signature for a multi-signed transaction.
 
-Definition::
+定义::
 
     POST /xrp/sign_for
     
-Example Request::
+请求示例::
 
     curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{ \ 
             "account": "rLFd1FzHMScFhLsXeaxStzv3UC97QHGAbM", \ 
@@ -701,7 +701,7 @@ Example Request::
             } \ 
         }' 'http://localhost:8080/xrp/sign_for'
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -742,17 +742,17 @@ submit
 `````````````````
 The submit method applies a transaction and sends it to the network to be confirmed and included in future ledgers.
 
-Definition::
+定义::
 
     POST /xrp/submit
     
-Example Request::
+请求示例::
 
     curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{ \ 
         "tx_blob": "1200002280000000240000000361D4838D7EA4C6800000000000000000000000000055534400000000004B4E9C06F24296074F7BC48F92A97916C6DC5EA968400000000000000A732103AB40A0490F9B7ED8DF29D246BF2D6269820A0EE7742ACDD457BEA7C7D0931EDB74473045022100D184EB4AE5956FF600E7536EE459345C7BBCF097A84CC61A93B9AF7197EDB98702201CEA8009B7BEEBAA2AACC0359B41C427C1C5B550A4CA4B80CF2174AF2D6D5DCE81144B4E9C06F24296074F7BC48F92A97916C6DC5EA983143E9D4A2B8AA0780F682D136F7A56D6724EF53754" \ 
         }' 'http://localhost:8080/xrp/submit'
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -790,17 +790,17 @@ tx
 `````````````````
 The tx method retrieves information on a single transaction.
 
-Definition::
+定义::
 
     POST /xrp/tx
     
-Example Request::
+请求示例::
 
     curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{ \ 
                 "transaction": "2DFC42DAC340AF7ED089F4A325E574A2C521C8B9CB39356F899A33595F4DB7D4" \ 
             }' 'http://localhost:8080/xrp/tx'
 
-Response:
+返回:
 
 .. code-block:: json
 

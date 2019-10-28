@@ -4,15 +4,15 @@ getbestblockhash
 ```````````
 Returns the hash of the best (tip) block in the longest block chain.
 
-Definition::
+定义::
 
     GET /ltc/getBestBlockHash/
 
-Example Request::
+请求示例::
 
     GET /ltc/getBestBlockHash/
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -55,15 +55,15 @@ Return:
     "nextblockhash" : "hash"       (string) The hash of the next block
  }
 
-Definition::
+定义::
 
     GET /ltc/getBlockByHash?hash={hash}    //hash (string) 
 
-Example Request::
+请求示例::
 
     GET /ltc/getBlockByHash?hash=069234e09f3d2cebcea66397c607279223047f4a05c8825564346fa728c73a68
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -144,14 +144,14 @@ Return:
     "nextblockhash" : "hash"       (string) The hash of the next block
     }
 
-Definition::
+定义::
 
     GET /ltc/getBlockByHeight?height={height}   //height (Integer)
-Example Request::
+请求示例::
 
     GET /ltc/getBlockByHeight?height=1724047
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -240,14 +240,14 @@ Return:
     "warnings" : "...",           (string) any network and blockchain warnings.
  }
 
-Definition::
+定义::
 
     GET /ltc/getBlockChainInfo
-Example Request::
+请求示例::
 
     GET /ltc/getBlockChainInfo
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -315,14 +315,14 @@ getBlockCount
 ```````````
 Returns the number of blocks in the longest blockchain
 
-Definition::
+定义::
 
     GET /ltc/getBlockCount
-Example Request::
+请求示例::
 
     GET /ltc/getBlockCount
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -336,14 +336,14 @@ getBlockHash
 ```````````
 Returns hash of block in best-block-chain at height provided
 
-Definition::
+定义::
 
     GET /ltc/getBlockHash?heighth={height}
-Example Request::
+请求示例::
 
     GET /ltc/getBlockHash?heighth=1724047
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -357,14 +357,14 @@ getDifficulty
 ```````````
 Returns the proof-of-work difficulty as a multiple of the minimum difficulty
 
-Definition::
+定义::
 
     GET /ltc/getDifficulty
-Example Request::
+请求示例::
 
     GET /ltc/getDifficulty
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -381,14 +381,14 @@ Returns all transaction ids in memory pool as a json array of string transaction
 
 Hint: use getmempoolentry to fetch a specific transaction from the mempool
 
-Definition::
+定义::
 
     GET /ltc/getRawMemPool
-Example Request::
+请求示例::
 
     GET /ltc/getRawMemPool
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -437,14 +437,14 @@ Result:
   "coinbase" : true|false   (boolean) Coinbase or not
  }
 
-Definition::
+定义::
 
     GET /ltc/gettxout?hash={hash}&vouth={vouth}&unconfirmed={unconfirmed}
-Example Request::
+请求示例::
 
     GET /ltc/gettxout?hash=xxx&vouth=1&unconfirmed=false
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -490,14 +490,14 @@ Result:
     "total_amount": x.xxx          (numeric) The total amount
   }
 
-Definition::
+定义::
 
     GET /ltc/getTxOutSetInfo
-Example Request::
+请求示例::
 
     GET /ltc/getTxOutSetInfo
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -523,14 +523,14 @@ verifyChain
 ```````````
 Verifies blockchain database
 
-Definition::
+定义::
 
     GET /ltc/verifyChain
-Example Request::
+请求示例::
 
     GET /ltc/verifyChain
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -550,14 +550,14 @@ Params:
 
 2. nblocks      (numeric, optional, default=6, 0=all) The number of blocks to check
 
-Definition::
+定义::
 
     GET /ltc/verifyChainByParam?checkLevel={checkLevel}&numOfBlocks={numOfBlocks}
-Example Request::
+请求示例::
 
     GET /ltc/verifyChainByParam?checkLevel=3&numOfBlocks=6
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -592,14 +592,14 @@ Result:
     "redeemScript":"script"       (string) The string value of the hex-encoded redemption script
   }
 
-Definition::
+定义::
 
     GET /ltc/createMultiSig?nRequired={nRequired}&keys={nRequired}
 Example Request:
 
     GET /ltc/createMultiSig?nRequired=6&keys=xxxxxxxxxxxxxxxxx
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -634,14 +634,14 @@ Result:
     "blocks" : n         (numeric) block number where estimate was found
   }
 
-Definition::
+定义::
 
     GET /ltc/estimateSmartFee?blocks={blocks}
 Example Request:
 
     GET /ltc/estimateSmartFee?blocks=1
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -662,14 +662,14 @@ validateAddress
 ```````````
 Return information about the given bitcoin address
 
-Definition::
+定义::
 
     GET /ltc/validateAddress?address={address}
 Example Request:
 
     GET /ltc/validateAddress?address=ltc1qc7eh07c5yu6w8f5lw6n7qttxxnr4zzu03rp5s7
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -694,14 +694,14 @@ Params
 3. "message"         (string, required) The message that was signed
 
 
-Definition::
+定义::
 
     GET /ltc/verifyMessage?address={address}&signature={signature}&message={message}
 Example Request:
 
     GET /ltc/verifyMessage?address=xxxxxxxx&signature=xxxxxxxx&message=xxxxxxxx
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -767,13 +767,13 @@ Return:
     "blocktime" : ttt         (numeric) The block time in seconds since epoch (Jan 1 1970 GMT)
  }
 
-Definition::
+定义::
 
     GET /ltc/queryTransactionInfo?txId={txId}
 Example Request:
 
     GET /ltc/queryTransactionInfo?txId=xxxxxxxxxxxx
-Response:
+返回:
 
 .. code-block:: json
 
@@ -843,14 +843,14 @@ Return a JSON object representing the serialized, hex-encoded transaction.
 
 Also see createrawtransaction and signrawtransaction calls
 
-Definition::
+定义::
 
     GET /ltc/decodeRawTransaction?hex={hex}
 Example Request:
 
     GET /ltc/decodeRawTransaction?hex=xxxxxxxxxx
 
-Response:
+返回:
 
 .. code-block:: json
 

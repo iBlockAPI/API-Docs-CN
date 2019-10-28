@@ -9,15 +9,15 @@ getbestblockhash
 `````````````````
 Returns the hash of the best (tip) block in the longest block chain.
 
-Definition::
+定义::
 
     GET /zec/getbestblockhash/
     
-Example Request::
+请求示例::
 
     GET /zec/getbestblockhash/
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -31,15 +31,15 @@ getBlockByBlockHeight
 ``````````````````````
 getblock "height"
 
-Definition::
+定义::
 
     GET /zec/getBlockByBlockHeight?height=12800
     
-Example Request::
+请求示例::
 
     GET /zec/getBlockByBlockHeight?height=12800
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -117,15 +117,15 @@ getBlockByBlockHash
 `````````````````
 getblock "hash"
 
-Definition::
+定义::
 
     GET /zec/getBlockByBlockHash?blockHash=00000000febc373a1da2bd9f887b105ad79ddc26ac26c2b28652d64e5207c5b5
     
-Example Request::
+请求示例::
 
     GET /zec/getBlockByBlockHash?blockHash=00000000febc373a1da2bd9f887b105ad79ddc26ac26c2b28652d64e5207c5b5
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -203,15 +203,15 @@ getblockcount
 `````````````````
 Returns the number of blocks in the best valid block chain.
 
-Definition::
+定义::
 
     GET /zec/getblockcount
     
-Example Request::
+请求示例::
 
     GET /zec/getblockcount
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -225,15 +225,15 @@ getrawtransaction
 `````````````````
 By default this function only works sometimes. This is when the tx is in the mempool or there is an unspent output in the utxo for this transaction.
 
-Definition::
+定义::
 
     GET /zec/getrawtransaction?txId=05b6de3a91c6e79cd6b8037995ad207cceed5f62dea0fa3b5481f2c13689a168
     
-Example Request::
+请求示例::
 
     GET /zec/getrawtransaction?txId=05b6de3a91c6e79cd6b8037995ad207cceed5f62dea0fa3b5481f2c13689a168
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -316,15 +316,15 @@ decoderawtransaction
 `````````````````
 Return a JSON object representing the serialized, hex-encoded transaction.
 
-Definition::
+定义::
 
     GET /zec/decoderawtransaction?rawtransaction={rawtransaction}
     
-Example Request::
+请求示例::
 
     GET /zec/decoderawtransaction?rawtransaction={rawtransaction}
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -402,15 +402,15 @@ sendRawTransaction
 `````````````````
 Submits raw transaction (serialized, hex-encoded) to local node and network.
 
-Definition::
+定义::
 
     GET /zec/sendRawTransaction?hexstring={rawtransaction}
     
-Example Request::
+请求示例::
 
     GET /zec/sendRawTransaction?hexstring={rawtransaction}
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -424,15 +424,15 @@ validateaddress
 `````````````````
 Return information about the given Zcash address.
 
-Definition::
+定义::
 
     GET /zec/validateaddress?address={address}
     
-Example Request::
+请求示例::
 
     curl -X GET --header 'Accept: application/json' 'http://localhost:8080/zec/validateaddress?address=xxxxxxxx'
 
-Response:
+返回:
 
 .. code-block:: json
 

@@ -4,15 +4,15 @@ getbestblockhash
 ```````````
 Returns the hash of the best (tip) block in the longest block chain.
 
-Definition::
+定义::
 
     GET /btc/getBestBlockHash/
 
-Example Request::
+请求示例::
 
     GET /btc/getBestBlockHash/
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -55,15 +55,15 @@ Return:
     "nextblockhash" : "hash"       (string) The hash of the next block
  }
 
-Definition::
+定义::
 
     GET /btc/getBlockByHash?hash={hash}    //hash (string) 
 
-Example Request::
+请求示例::
 
     GET /btc/getBlockByHash?hash=00000000000000000009ebd5b872ca8f18255889ee5629a0b764a25e3659b326
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -132,14 +132,14 @@ Return:
     "nextblockhash" : "hash"       (string) The hash of the next block
     }
 
-Definition::
+定义::
 
     GET /btc/getBlockByHeight?height={height}   //height (Integer)
-Example Request::
+请求示例::
 
     GET /btc/getBlockByHeight?height=600618
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -228,14 +228,14 @@ Return:
     "warnings" : "...",           (string) any network and blockchain warnings.
  }
 
-Definition::
+定义::
 
     GET /btc/getBlockChainInfo
-Example Request::
+请求示例::
 
     GET /btc/getBlockChainInfo
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -303,14 +303,14 @@ getBlockCount
 ```````````
 Returns the number of blocks in the longest blockchain
 
-Definition::
+定义::
 
     GET /btc/getBlockCount
-Example Request::
+请求示例::
 
     GET /btc/getBlockCount
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -324,14 +324,14 @@ getBlockHash
 ```````````
 Returns hash of block in best-block-chain at height provided
 
-Definition::
+定义::
 
     GET /btc/getBlockHash?heighth={height}
-Example Request::
+请求示例::
 
     GET /btc/getBlockHash?heighth=600626
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -345,14 +345,14 @@ getDifficulty
 ```````````
 Returns the proof-of-work difficulty as a multiple of the minimum difficulty
 
-Definition::
+定义::
 
     GET /btc/getDifficulty
-Example Request::
+请求示例::
 
     GET /btc/getDifficulty
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -369,14 +369,14 @@ Returns all transaction ids in memory pool as a json array of string transaction
 
 Hint: use getmempoolentry to fetch a specific transaction from the mempool
 
-Definition::
+定义::
 
     GET /btc/getRawMemPool
-Example Request::
+请求示例::
 
     GET /btc/getRawMemPool
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -427,14 +427,14 @@ Result:
   "coinbase" : true|false   (boolean) Coinbase or not
  }
 
-Definition::
+定义::
 
     GET /btc/gettxout?hash={hash}&vouth={vouth}&unconfirmed={unconfirmed}
-Example Request::
+请求示例::
 
     GET /btc/gettxout?hash=xxx&vouth=1&unconfirmed=false
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -480,14 +480,14 @@ Result:
     "total_amount": x.xxx          (numeric) The total amount
   }
 
-Definition::
+定义::
 
     GET /btc/getTxOutSetInfo
-Example Request::
+请求示例::
 
     GET /btc/getTxOutSetInfo
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -513,14 +513,14 @@ verifyChain
 ```````````
 Verifies blockchain database
 
-Definition::
+定义::
 
     GET /btc/verifyChain
-Example Request::
+请求示例::
 
     GET /btc/verifyChain
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -540,14 +540,14 @@ Params:
 
 2. nblocks      (numeric, optional, default=6, 0=all) The number of blocks to check
 
-Definition::
+定义::
 
     GET /btc/verifyChainByParam?checkLevel={checkLevel}&numOfBlocks={numOfBlocks}
-Example Request::
+请求示例::
 
     GET /btc/verifyChainByParam?checkLevel=3&numOfBlocks=6
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -582,14 +582,14 @@ Result:
     "redeemScript":"script"       (string) The string value of the hex-encoded redemption script
   }
 
-Definition::
+定义::
 
     GET /btc/createMultiSig?nRequired={nRequired}&keys={nRequired}
 Example Request:
 
     GET /btc/createMultiSig?nRequired=6&keys=xxxxxxxxxxxxxxxxx
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -624,14 +624,14 @@ Result:
     "blocks" : n         (numeric) block number where estimate was found
   }
 
-Definition::
+定义::
 
     GET /btc/estimateSmartFee?blocks={blocks}
 Example Request:
 
     GET /btc/estimateSmartFee?blocks=1
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -652,14 +652,14 @@ validateAddress
 ```````````
 Return information about the given bitcoin address
 
-Definition::
+定义::
 
     GET /btc/validateAddress?address={address}
 Example Request:
 
     GET /btc/validateAddress?address=3LwxH2frucsDJfFainnKKGonJduHXesXAD
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -684,14 +684,14 @@ Params
 3. "message"         (string, required) The message that was signed
 
 
-Definition::
+定义::
 
     GET /btc/verifyMessage?bitcoinAddress={address}&signature={signature}&message={message}
 Example Request:
 
     GET /btc/verifyMessage?bitcoinAddress=xxxxxxxx&signature=xxxxxxxx&message=xxxxxxxx
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -757,13 +757,13 @@ Return:
     "blocktime" : ttt         (numeric) The block time in seconds since epoch (Jan 1 1970 GMT)
  }
 
-Definition::
+定义::
 
     GET /btc/queryTransactionInfo?txId={txId}
 Example Request:
 
     GET /btc/queryTransactionInfo?txId=xxxxxxxxxxxx
-Response:
+返回:
 
 .. code-block:: json
 
@@ -838,14 +838,14 @@ Return a JSON object representing the serialized, hex-encoded transaction.
 
 Also see createrawtransaction and signrawtransaction calls
 
-Definition::
+定义::
 
     GET /btc/decodeRawTransaction?hex={hex}
 Example Request:
 
     GET /btc/decodeRawTransaction?hex=xxxxxxxxxx
 
-Response:
+返回:
 
 .. code-block:: json
 

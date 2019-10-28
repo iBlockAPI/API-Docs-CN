@@ -5,15 +5,15 @@ ethGetTransactionReceipt
 `````````````````
 Returns the receipt of a transaction by transaction hash.
 
-Definition::
+定义::
 
     GET /eth/ethGetTransactionReceipt?txHash=0x2fd36a4d0ac98e2c01ed3669835927cb1a18375d8bf97e09ac2f4cc287687743
     
-Example Request::
+请求示例::
 
     curl -X GET --header 'Accept: application/json' 'http://localhost:8080/eth/ethGetTransactionReceipt?txHash=0x2fd36a4d0ac98e2c01ed3669835927cb1a18375d8bf97e09ac2f4cc287687743'
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -47,15 +47,15 @@ ethGetTransactionByHash
 `````````````````
 Returns the information about a transaction requested by transaction hash.
 
-Definition::
+定义::
 
     GET /eth/ethGetTransactionByHash?txHash=0x2fd36a4d0ac98e2c01ed3669835927cb1a18375d8bf97e09ac2f4cc287687743
     
-Example Request::
+请求示例::
 
     curl -X GET --header 'Accept: application/json' 'http://localhost:8080/eth/ethGetTransactionByHash?txHash=0x2fd36a4d0ac98e2c01ed3669835927cb1a18375d8bf97e09ac2f4cc287687743'
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -126,15 +126,15 @@ ethGetBlockByHash
 `````````````````
 Returns information about a block by hash.
 
-Definition::
+定义::
 
     GET /eth/ethGetBlockByHash?txHash=0x9de9fa4172199ad230af553ac26ffa6b10f2d896d61a5e71f3f30dea5da62d65
     
-Example Request::
+请求示例::
 
     curl -X GET --header 'Accept: application/json' 'http://localhost:8080/eth/ethGetBlockByHash?txHash=0x9de9fa4172199ad230af553ac26ffa6b10f2d896d61a5e71f3f30dea5da62d65'
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -231,15 +231,15 @@ ethGetBlockByNumber
 `````````````````
 Returns information about a block by block number.
 
-Definition::
+定义::
 
     GET /eth/ethGetBlockByNumber?number=8795764
     
-Example Request::
+请求示例::
 
     curl -X GET --header 'Accept: application/json' 'http://localhost:8080/eth/ethGetBlockByNumber?number=8795764'
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -336,15 +336,15 @@ ethGetBalance
 `````````````````
 Returns the balance(integer of the current balance in wei.) of the account of given address.
 
-Definition::
+定义::
 
     GET /eth/ethGetBalance?address=0xea674fdde714fd979de3edf0f56aa9716b898ec8
     
-Example Request::
+请求示例::
 
     curl -X GET --header 'Accept: application/json' 'http://localhost:8080/eth/ethGetBalance?address=0xea674fdde714fd979de3edf0f56aa9716b898ec8'
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -359,15 +359,15 @@ ethBlockNumber
 `````````````````
 Returns the number of most recent block.
 
-Definition::
+定义::
 
     GET /eth/ethBlockNumber
     
-Example Request::
+请求示例::
 
     curl -X GET --header 'Accept: application/json' 'http://localhost:8080/eth/ethBlockNumber'
 
-Response:
+返回:
 
 .. code-block:: json
 

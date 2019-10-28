@@ -4,15 +4,15 @@ validateAddress
 ```````````
 Verifies that the address is a correct ADA address
 
-Definition::
+定义::
 
     GET /ada/validateAddress?address={adderess}
     
-Example Request::
+请求示例::
 
     GET /ada/validateAddress?address=12312312312
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -26,15 +26,15 @@ getAddressInfo
 ```````````
 Get summary information about an address.
 
-Definition::
+定义::
 
     GET /ada/getAddressInfo?address={adderess}
     
-Example Request::
+请求示例::
 
     GET /ada/getAddressInfo?address=DdzFFzCqrhsvB8v761AotebjeczMDkBEqk5p8u7jvoyxgdMdnem7qS58A2vtoU66uHCmFa1QbXCoQ5yDp5mCsnmJ3qUYPvrSw4LNrs2i
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -97,15 +97,15 @@ getBlockByHash
 ```````````
 Get block's summary information by HASH.
 
-Definition::
+定义::
 
     GET /ada/getBlockByHash?hash={hash}
     
-Example Request::
+请求示例::
 
     GET /ada/getBlockByHash?hash=a50f856c4ac7a3955bccc3b08cfb8ba8c82883b4264d430b75eeb21395ff47d4
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -141,15 +141,15 @@ getBlockByEpochAndSlot
 ```````````
 Get block's summary information by epoch and slot.
 
-Definition::
+定义::
 
     GET /ada/getBlockByEpochAndSlot?epoch={epoch}&slot={slot}
     
-Example Request::
+请求示例::
 
     GET /ada/getBlockByEpochAndSlot?epoch=151&slot=9
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -182,15 +182,15 @@ getBlockTxsByHash
 ```````````
 Get block's brief information about transactions.
 
-Definition::
+定义::
 
     GET /ada/getBlockTxsByHash?hash={hash}
 
-Example Request::
+请求示例::
 
     GET /ada/getBlockTxsByHash?hash=48ade3faf23f887c67d7277e5430122b86844f3308bb35dd44a3898500da0e78
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -325,15 +325,15 @@ getLastTransactions
 ```````````
 Get information about the N latest transactions.
 
-Definition::
+定义::
 
     GET /ada/getLastTransactions
 
-Example Request::
+请求示例::
 
     GET /ada/getLastTransactions
 
-Response:
+返回:
 
 .. code-block:: json
 
@@ -380,15 +380,15 @@ queryTransactionByTxHash
 ```````````
 Query transaction based on hash
 
-Definition::
+定义::
 
     GET /ada/queryTransactionByTxHash?hash={hash}
 
-Example Request::
+请求示例::
 
     GET /ada/queryTransactionByTxHash?hash=
 
-Response:
+返回:
 
 .. code-block:: json
 
