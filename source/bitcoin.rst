@@ -26,7 +26,7 @@ getBlockByHash
 ```````````
 Get the block of the specified hash according to the block hash
 
-Return:
+返回:
 
 .. code-block:: json
 
@@ -103,7 +103,7 @@ getBlockByHeight
 ```````````
 Get the block of the specified hash according to the block height
 
-Return:
+返回:
 
 .. code-block:: json
 
@@ -181,7 +181,7 @@ getBlockChainInfo
 ```````````
 Returns an object containing various state info regarding blockchain processing
 
-Return:
+返回:
 
 .. code-block:: json
 
@@ -707,7 +707,7 @@ queryTransactionInfo
 ```````````
 Query transaction information according to txid
 
-Return:
+返回:
 
 .. code-block:: json
 
