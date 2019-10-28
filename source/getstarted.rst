@@ -1,16 +1,19 @@
-Get Started
+开始
 ===========
-Intruduce infomation.
+本文档指导开发者如何使用iBlockAPI.
 
-Base URL
+基本URL
 `````````````````
-All REST APIs in the documentation have the following base URL:
+本文中所有接口的基本URL为：
+
+.. code-block:: bash
 
     https://api.iblockapi.com/
 
-Basic Authentication
+认证
 ``````````````````````
-The HTTP requests to the REST API are protected with authentication. You can create an application in Dashboard, using apiKey to authenticate.  For example:
+
+本文所有请求，都受API Key 保护。用户可以在网站中创建应用，得到一个API Key，使用示例：
 
 .. code-block:: bash
 
