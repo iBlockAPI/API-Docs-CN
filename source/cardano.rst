@@ -2,7 +2,7 @@ Cardano API Docs
 ===========
 validateAddress
 ```````````
-Verifies that the address is a correct ADA address
+检查地址是否正确
 
 定义::
 
@@ -24,7 +24,7 @@ Verifies that the address is a correct ADA address
 
 getAddressInfo
 ```````````
-Get summary information about an address.
+根据地址获取信息
 
 定义::
 
@@ -95,7 +95,7 @@ Get summary information about an address.
 
 getBlockByHash
 ```````````
-Get block's summary information by HASH.
+通过区块Hash获取区块的摘要信息
 
 定义::
 
@@ -139,7 +139,7 @@ Get block's summary information by HASH.
 
 getBlockByEpochAndSlot
 ```````````
-Get block's summary information by epoch and slot.
+通过区块epoch和slot获取区块的摘要信息
 
 定义::
 
@@ -180,7 +180,7 @@ Get block's summary information by epoch and slot.
 
 getBlockTxsByHash
 ```````````
-Get block's brief information about transactions.
+根据区块Hash获取区块上的交易信息
 
 定义::
 
@@ -323,7 +323,7 @@ Get block's brief information about transactions.
 
 getLastTransactions
 ```````````
-Get information about the N latest transactions.
+获取最新的20条交易记录
 
 定义::
 
@@ -378,7 +378,7 @@ Get information about the N latest transactions.
 
 queryTransactionByTxHash
 ```````````
-Query transaction based on hash
+通过Id(Hash)获取交易信息
 
 定义::
 

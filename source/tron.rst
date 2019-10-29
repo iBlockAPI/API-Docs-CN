@@ -2,7 +2,7 @@ Tron API Docs
 ===========
 getNowBlock
 ```````````
-Query the latest block
+查询最新块。
 
 定义::
 
@@ -103,7 +103,7 @@ Query the latest block
 
 getBlockByNum
 ```````````
-Query block by height
+通过高度查询块
 
 定义::
 
@@ -204,7 +204,7 @@ Query block by height
 
 getBlockById
 ```````````
-Query block by ID(hash)
+通过ID(Hash)查询块
 
 定义::
 
@@ -305,7 +305,7 @@ Query block by ID(hash)
 
 queryTransactionByTxHash
 ```````````
-Query transaction based on hash
+通过ID(Hash)查询交易
 
 定义::
 
@@ -356,7 +356,7 @@ Query transaction based on hash
 
 queryTransactioninfoByHash
 ```````````
-Query transaction fee based on hash
+根据ID(Hash)查询交易的fee，所在的block
 
 定义::
 
@@ -389,7 +389,7 @@ Query transaction fee based on hash
 
 validateAddress
 ```````````
-Verifies that the address is a correct TRX address
+检查地址是否正确
 
 定义::
 
@@ -411,7 +411,7 @@ Verifies that the address is a correct TRX address
 
 getAccount
 ```````````
-Query information about an account
+查询一个账号的信息
 
 定义::
 
@@ -463,7 +463,7 @@ Query information about an account
 
 getAccountNet
 ```````````
-Query bandwidth information about an account
+查询账户的资源信息
 
 定义::
 
@@ -500,7 +500,7 @@ Query bandwidth information about an account
 
 getAssetIssueById
 ```````````
-Query token information by id
+根据id查询token信息
 
 定义::
 
