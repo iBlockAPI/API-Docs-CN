@@ -3,7 +3,7 @@ EthereumClassic API Docs
 
 ethGetTransactionReceipt
 `````````````````
-Returns the receipt of a transaction by transaction hash.
+方法返回指定交易的收据对象。 如果交易处于pending状态，则返回null。
 
 定义::
 
@@ -45,7 +45,7 @@ Returns the receipt of a transaction by transaction hash.
 
 ethGetTransactionByHash
 `````````````````
-Returns the information about a transaction requested by transaction hash.
+方法返回具有指定哈希值的交易对象。
 
 定义::
 
@@ -124,7 +124,7 @@ Returns the information about a transaction requested by transaction hash.
 
 ethGetBlockByHash
 `````````````````
-Returns information about a block by hash.
+方法返回指定哈希对应的块。
 
 定义::
 
@@ -229,7 +229,7 @@ Returns information about a block by hash.
 
 ethGetBlockByNumber
 `````````````````
-Returns information about a block by block number.
+方法返回指定块编号对应的块。
 
 定义::
 
@@ -334,7 +334,7 @@ Returns information about a block by block number.
 
 ethGetBalance
 `````````````````
-Returns the balance(integer of the current balance in wei.) of the account of given address.
+方法用来获取指定块中特定账户地址的余额。
 
 定义::
 
@@ -357,7 +357,7 @@ Returns the balance(integer of the current balance in wei.) of the account of gi
 
 ethBlockNumber
 `````````````````
-Returns the number of most recent block.
+返回当前块编号。
 
 定义::
 
