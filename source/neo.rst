@@ -2,7 +2,7 @@ Neo API Docs
 ===========
 getAccountState
 ```````````
-Queries global assets (NEO, GAS, and etc.) of the account, according to the account address
+根据账户地址，查询账户全局资产（如 NEO、GAS 等）资产信息。
 
 定义::
 
@@ -39,7 +39,7 @@ Queries global assets (NEO, GAS, and etc.) of the account, according to the acco
 
 getApplicationLog
 ```````````
-Returns the contract log based on the specified txid. The complete contract logs are stored under the ApplicationLogs directory
+根据指定的 NEP-5 交易 ID 获取合约日志。完整的合约日志会记录到 ApplicationLogs 目录。
 
 定义::
 
@@ -103,7 +103,7 @@ Returns the contract log based on the specified txid. The complete contract logs
 
 getAssetState
 ```````````
-Queries the asset information, based on the specified asset number
+根据指定的资产编号，查询资产信息。
 
 定义::
 
@@ -147,7 +147,7 @@ Queries the asset information, based on the specified asset number
 
 getBestBlockHash
 ```````````
-Get the hash of the highest height block in the main chain
+获取主链中高度最大的区块的散列。
 
 定义::
 
@@ -169,7 +169,7 @@ Get the hash of the highest height block in the main chain
 
 getBlockByHash
 ```````````
-Returns the corresponding block information according to the specified hash value
+根据指定的索引，返回对应区块的散列值。
 
 定义::
 
@@ -255,7 +255,7 @@ Returns the corresponding block information according to the specified hash valu
 
 getBlockByIndex
 ```````````
-Returns the corresponding block information according to the specified index
+根据指定的索引，返回对应的区块信息。
 
 定义::
 
@@ -341,7 +341,7 @@ Returns the corresponding block information according to the specified index
 
 getBlockCount
 ```````````
-Get the number of blocks in the main chain
+获取主链中区块的数量。
 
 定义::
 
@@ -361,17 +361,39 @@ Get the number of blocks in the main chain
         "data": 4357025
     }
 
+getBlockHeader
+```````````
+根据指定的散列值，返回对应的区块头信息。
+
+定义::
+
+    GET /neo/getBlockHeader?hash={hash}&verbose={Integer}
+    
+请求示例::
+
+    GET /neo/getBlockHeader?hash=0x2deeb34ac5af3c8373c72c0d7f5b58f36445284b54cb8bb527af68b429ae9cce&verbose=0
+
+返回:
+
+.. code-block:: json
+
+    {
+        "status": 0,
+        "message": "success",
+        "data": "000000002704dbce7e37f137d7886a989998e4b1d6bb13d20c868fac344c3444ed390cdf99a1f0efa8d9c86dbde14db6ea901b03f31e099d15e81e11c44b628133c7a140f6148f5da07b420054a8403528221f6e4e4e04879cfe60ba3b296b1ff08f112f6071756f01fd4501404e27ad42ff63f369436a81c0a87bb2044c347d0a947825ff548e897969792fbb844416d47988958e583b6d5ecdf15981c2f84535bf82a151369cbc82c38b93c24045bff4dde4f1cf10ae8c258133617717e403b82bce75a97de0c1ac375120ac5dffb7ef22fe4ad1ad170a469f98139e5571c649ba7a6e3cb26f08f00b7845280e40675b826945559b012292fc8ecebe4da51275cc28639424ac9ef7946a90d6611636f0b309284913520c2ed0b43ad2d499a42f7428cdc9ab39bd13a412e0bee4d64020ff3a7f1a292bbb9a9a1bd8c3c1dd4738d3173ba35e7c2f673be3cc90ef81c2966124c4063bffa3640c041abab841b44c52950cd33922fd485270c1b1a8cf03407e176971bbb9cf8758db9a1ed68adc64e2e3dd969f6905bf8bc3ea7e7472d644b092d3e44f74edc04382dc715ebec868a474c9d560d948aae47d2b27e1e2650bf15521024c7b7fb6c310fccf1ba33b082519d82964ea93868d676662d4a59ad548df0e7d21025bdf3f181f53e9696227843950deb72dcd374ded17c057159513c3d0abe20b6421035e819642a8915a2572f972ddbdbe3042ae6437349295edce9bdc3b8884bbf9a32103b209fd4f53a7170ea4444e0cb0a6bb6a53c2bd016926989cf85f9b0fba17a70c2103b8d9d5771d8f513aa0869b9cc8d50986403b78c6da36890638c3d46a5adce04a2102ca0e27697b9c248f6f16e085fd0061e26f44da85b58ee835c110caa5ec3ba5542102df48f60e8f3e01c48ff40b9b7f1310d7a8b2a193188befe1c2e3df740e89509357ae00"
+    }
+
 getBlockHash
 ```````````
-Returns the hash value of the corresponding block, based on the specified index
+根据指定的索引，返回对应区块的散列值。
 
 定义::
 
-    GET /neo/getBlockHash?index={Integer}
+    GET /neo/getBlockHash?index={integer}
     
 请求示例::
 
-    GET /neo/getBlockHash?index=4357024
+    GET /neo/getBlockHash?index=111
 
 返回:
 
@@ -380,56 +402,12 @@ Returns the hash value of the corresponding block, based on the specified index
     {
         "status": 0,
         "message": "success",
-        "data": "0x2deeb34ac5af3c8373c72c0d7f5b58f36445284b54cb8bb527af68b429ae9cce"
-    }
-
-getBlockHeader
-```````````
-Returns the corresponding block header information according to the specified script hash
-
-定义::
-
-    GET /neo/getBlockHeader?hash={hash}&verbose={Integer}
-    
-请求示例::
-
-    GET /neo/getBlockHeader?hash=0x2deeb34ac5af3c8373c72c0d7f5b58f36445284b54cb8bb527af68b429ae9cce&verbose=0
-
-返回:
-
-.. code-block:: json
-
-    {
-        "status": 0,
-        "message": "success",
-        "data": "000000002704dbce7e37f137d7886a989998e4b1d6bb13d20c868fac344c3444ed390cdf99a1f0efa8d9c86dbde14db6ea901b03f31e099d15e81e11c44b628133c7a140f6148f5da07b420054a8403528221f6e4e4e04879cfe60ba3b296b1ff08f112f6071756f01fd4501404e27ad42ff63f369436a81c0a87bb2044c347d0a947825ff548e897969792fbb844416d47988958e583b6d5ecdf15981c2f84535bf82a151369cbc82c38b93c24045bff4dde4f1cf10ae8c258133617717e403b82bce75a97de0c1ac375120ac5dffb7ef22fe4ad1ad170a469f98139e5571c649ba7a6e3cb26f08f00b7845280e40675b826945559b012292fc8ecebe4da51275cc28639424ac9ef7946a90d6611636f0b309284913520c2ed0b43ad2d499a42f7428cdc9ab39bd13a412e0bee4d64020ff3a7f1a292bbb9a9a1bd8c3c1dd4738d3173ba35e7c2f673be3cc90ef81c2966124c4063bffa3640c041abab841b44c52950cd33922fd485270c1b1a8cf03407e176971bbb9cf8758db9a1ed68adc64e2e3dd969f6905bf8bc3ea7e7472d644b092d3e44f74edc04382dc715ebec868a474c9d560d948aae47d2b27e1e2650bf15521024c7b7fb6c310fccf1ba33b082519d82964ea93868d676662d4a59ad548df0e7d21025bdf3f181f53e9696227843950deb72dcd374ded17c057159513c3d0abe20b6421035e819642a8915a2572f972ddbdbe3042ae6437349295edce9bdc3b8884bbf9a32103b209fd4f53a7170ea4444e0cb0a6bb6a53c2bd016926989cf85f9b0fba17a70c2103b8d9d5771d8f513aa0869b9cc8d50986403b78c6da36890638c3d46a5adce04a2102ca0e27697b9c248f6f16e085fd0061e26f44da85b58ee835c110caa5ec3ba5542102df48f60e8f3e01c48ff40b9b7f1310d7a8b2a193188befe1c2e3df740e89509357ae00"
-    }
-
-getBlockHeader
-```````````
-Returns the corresponding block header information according to the specified script hash
-
-定义::
-
-    GET /neo/getBlockHeader?hash={hash}&verbose={Integer}
-    
-请求示例::
-
-    GET /neo/getBlockHeader?hash=0x2deeb34ac5af3c8373c72c0d7f5b58f36445284b54cb8bb527af68b429ae9cce&verbose=0
-
-返回:
-
-.. code-block:: json
-
-    {
-        "status": 0,
-        "message": "success",
-        "data": "000000002704dbce7e37f137d7886a989998e4b1d6bb13d20c868fac344c3444ed390cdf99a1f0efa8d9c86dbde14db6ea901b03f31e099d15e81e11c44b628133c7a140f6148f5da07b420054a8403528221f6e4e4e04879cfe60ba3b296b1ff08f112f6071756f01fd4501404e27ad42ff63f369436a81c0a87bb2044c347d0a947825ff548e897969792fbb844416d47988958e583b6d5ecdf15981c2f84535bf82a151369cbc82c38b93c24045bff4dde4f1cf10ae8c258133617717e403b82bce75a97de0c1ac375120ac5dffb7ef22fe4ad1ad170a469f98139e5571c649ba7a6e3cb26f08f00b7845280e40675b826945559b012292fc8ecebe4da51275cc28639424ac9ef7946a90d6611636f0b309284913520c2ed0b43ad2d499a42f7428cdc9ab39bd13a412e0bee4d64020ff3a7f1a292bbb9a9a1bd8c3c1dd4738d3173ba35e7c2f673be3cc90ef81c2966124c4063bffa3640c041abab841b44c52950cd33922fd485270c1b1a8cf03407e176971bbb9cf8758db9a1ed68adc64e2e3dd969f6905bf8bc3ea7e7472d644b092d3e44f74edc04382dc715ebec868a474c9d560d948aae47d2b27e1e2650bf15521024c7b7fb6c310fccf1ba33b082519d82964ea93868d676662d4a59ad548df0e7d21025bdf3f181f53e9696227843950deb72dcd374ded17c057159513c3d0abe20b6421035e819642a8915a2572f972ddbdbe3042ae6437349295edce9bdc3b8884bbf9a32103b209fd4f53a7170ea4444e0cb0a6bb6a53c2bd016926989cf85f9b0fba17a70c2103b8d9d5771d8f513aa0869b9cc8d50986403b78c6da36890638c3d46a5adce04a2102ca0e27697b9c248f6f16e085fd0061e26f44da85b58ee835c110caa5ec3ba5542102df48f60e8f3e01c48ff40b9b7f1310d7a8b2a193188befe1c2e3df740e89509357ae00"
+        "data": "0x4c1e879872344349067c3b1a30781eeb4f9040d3795db7922f513f6f9660b9b2"
     }
 
 getBlockSysFee
 ```````````
-Returns the system fees of the block, based on the specified index
+根据指定的索引，返回截止到该区块前的系统手续费。
 
 定义::
 
@@ -451,7 +429,7 @@ Returns the system fees of the block, based on the specified index
 
 getClaimable
 ```````````
-Returns claimable GAS information of the specified address
+返回指定地址内可以 claim 的 GAS 信息。
 
 定义::
 
@@ -488,7 +466,7 @@ Returns claimable GAS information of the specified address
 
 getConnectionCount
 ```````````
-Gets the current number of connections for the node
+获取节点当前的连接数。
 
 定义::
 
@@ -510,7 +488,7 @@ Gets the current number of connections for the node
 
 getMetricBlockTimestamp
 ```````````
-Returns timestamps of the specified block and its previous n blocks
+返回指定区块高度及之前 n 个区块的 timestamp。
 
 定义::
 
@@ -541,7 +519,7 @@ Returns timestamps of the specified block and its previous n blocks
 
 getNep5Balances
 ```````````
-Returns the balance of all NEP-5 assets in the specified address
+返回指定地址内的所有 NEP-5 资产余额。
 
 定义::
 
@@ -577,7 +555,7 @@ Returns the balance of all NEP-5 assets in the specified address
 
 getNep5Transfers
 ```````````
-Returns all the NEP-5 transaction information occurred in the specified address
+返回指定地址内的所有 NEP-5 交易记录。
 
 定义::
 
@@ -613,7 +591,7 @@ Returns all the NEP-5 transaction information occurred in the specified address
 
 getPeers
 ```````````
-Gets the list of nodes that the node is currently connected/disconnected from
+获得该节点当前已连接 / 未连接的节点列表。
 
 定义::
 
@@ -657,7 +635,7 @@ Gets the list of nodes that the node is currently connected/disconnected from
 
 getRawMempool
 ```````````
-Obtains the list of unconfirmed transactions in memory
+获取内存中未确认的交易列表。
 
 定义::
 
@@ -683,7 +661,7 @@ Obtains the list of unconfirmed transactions in memory
 
 getRawTransaction
 ```````````
-Returns the corresponding transaction information, based on the specified hash value
+根据指定的散列值，返回对应的交易信息。
 
 定义::
 
@@ -705,7 +683,7 @@ Returns the corresponding transaction information, based on the specified hash v
 
 getStorage
 ```````````
-Returns the stored value, according to the contract script hash and the stored key
+根据合约脚本散列和存储的 key，返回存储的 value。
 
 定义::
 
@@ -727,7 +705,7 @@ Returns the stored value, according to the contract script hash and the stored k
 
 getTransactionHeight
 ```````````
-Returns the block index in which the transaction is found
+获取交易高度。
 
 定义::
 
@@ -749,7 +727,7 @@ Returns the block index in which the transaction is found
 
 getTxout
 ```````````
-Returns the corresponding unspent transaction output information (returned change), based on the specified hash and index
+根据指定的散列和索引，返回对应的 unspent 交易输出（零钱）信息。如果交易输出已经花费，返回结果为空。
 
 定义::
 
@@ -776,7 +754,7 @@ Returns the corresponding unspent transaction output information (returned chang
 
 getUnclaimed
 ```````````
-Returns unclaimed GAS amount of the specified address
+返回指定地址中未提取的 GAS 数量。
 
 定义::
 
@@ -802,7 +780,7 @@ Returns unclaimed GAS amount of the specified address
 
 getUnspents
 ```````````
-Returns information of the unspent UTXO assets (e.g. NEO, GAS) at the specified address
+返回指定账户中未花费的 UTXO 资产（如 NEO、GAS）信息。
 
 定义::
 
@@ -859,7 +837,7 @@ Returns information of the unspent UTXO assets (e.g. NEO, GAS) at the specified 
 
 getValidators
 ```````````
-Returns the current NEO consensus nodes information and voting status
+获取当前 NEO 共识节点的信息及投票情况。
 
 定义::
 
@@ -892,7 +870,7 @@ Returns the current NEO consensus nodes information and voting status
 
 getcontractstate
 ```````````
-Queries contract information, according to the contract script hash
+根据合约脚本散列，查询合约信息。
 
 定义::
 
@@ -931,7 +909,7 @@ Queries contract information, according to the contract script hash
 
 getversion
 ```````````
-Returns the version information about the queried node
+获取查询节点的版本信息。
 
 定义::
 
@@ -957,7 +935,7 @@ Returns the version information about the queried node
 
 listPlugins
 ```````````
-Returns a list of plugins loaded by the node
+显示节点已加载的插件列表。
 
 定义::
 
@@ -995,7 +973,7 @@ Returns a list of plugins loaded by the node
 
 sendRawTransaction
 ```````````
-Broadcasts a transaction over the NEO network
+广播交易。
 
 定义::
 
@@ -1017,7 +995,7 @@ Broadcasts a transaction over the NEO network
 
 submitBlock
 ```````````
-Broadcasts a raw block over the NEO network
+在 NEO 网络广播原始区块。
 
 定义::
 
@@ -1039,7 +1017,7 @@ Broadcasts a raw block over the NEO network
 
 validateAddress
 ```````````
-Broadcasts a raw block over the NEO network
+验证地址是否是正确的 NEO 地址。
 
 定义::
 
