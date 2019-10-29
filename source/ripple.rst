@@ -3,7 +3,7 @@ Ripple API Docs
 
 account_info
 `````````````````
-The account_info command retrieves information about an account, its activity, and its XRP balance. All information retrieved is relative to a particular version of the ledger.
+用来获取指定账户的信息，例如其活动情况以及XRP余额。 返回的所有数据都相对于指定的账本版本。
 
 定义::
 
@@ -50,7 +50,7 @@ The account_info command retrieves information about an account, its activity, a
 
 account_currencies
 `````````````````
-The account_currencies command retrieves a list of currencies that an account can send or receive, based on its trust lines. (This is not a thoroughly confirmed list, but it can be used to populate user interfaces.)
+获取指定账户可以发送或接收的货币清单。注意，返回的清单不一定是 完全确认的，但可以用来填充用户界面。
 
 定义::
 
@@ -106,7 +106,7 @@ The account_currencies command retrieves a list of currencies that an account ca
 
 account_tx
 `````````````````
-Retrieves a list of transactions that affected the specified account.
+命令获取指定账户参与的交易清单。
 
 定义::
 
@@ -404,7 +404,7 @@ Retrieves a list of transactions that affected the specified account.
 
 ledger
 `````````````````
-Retrieve information about the public ledger.
+获取公共账本的信息。
 
 定义::
 
@@ -457,7 +457,7 @@ Retrieve information about the public ledger.
 
 ledger_closed
 `````````````````
-Returns the unique identifiers of the most recently closed ledger. (This ledger is not necessarily validated and immutable yet.)
+返回最近关闭的账本的唯一标识符，该账本不一定是确认过的，也不一定是不可变更的。
 
 定义::
 
@@ -485,7 +485,7 @@ Returns the unique identifiers of the most recently closed ledger. (This ledger 
 
 ledger_current
 `````````````````
-The ledger_current method returns the unique identifiers of the current in-progress ledger. This command is mostly useful for testing, because the ledger returned is still in flux.
+返回当前使用的账本的唯一标识符，该命令在测试时非常有用， 因为返回的账本还在变化当中。
 
 定义::
 
@@ -512,7 +512,7 @@ The ledger_current method returns the unique identifiers of the current in-progr
 
 ledger_data
 `````````````````
-The ledger_data method retrieves contents of the specified ledger. You can iterate through several calls to retrieve the entire contents of a single ledger version.
+获取指定账本的数据内容，可以通过多次迭代调用该命令 来获取指定账本的全部内容。
 
 定义::
 
@@ -572,7 +572,7 @@ The ledger_data method retrieves contents of the specified ledger. You can itera
 
 ledger_entry
 `````````````````
-The ledger_data method retrieves contents of the specified ledger. You can iterate through several calls to retrieve the entire contents of a single ledger version.
+获取账本中的指定条目的数据。
 
 定义::
 
@@ -617,7 +617,7 @@ The ledger_data method retrieves contents of the specified ledger. You can itera
 
 sign
 `````````````````
-The sign method takes a transaction in JSON format and a seed value, and returns a signed binary representation of the transaction. To contribute one signature to a multi-signed transaction, use the sign_for method instead.
+命令使用指定的密钥对JSON格式的交易进行签名，返回签名后的16进制字符串数据。 即使使用同样的交易数据和密钥，每次调用sign命令也会返回不同的结果。要对多重 签名交易进行签名，请使用sign_for命令。
 
 定义::
 
@@ -674,7 +674,7 @@ The sign method takes a transaction in JSON format and a seed value, and returns
 
 sign_for
 `````````````````
-The sign_for command provides one signature for a multi-signed transaction.
+为多重签名交易贡献一次签名。
 
 定义::
 
@@ -740,7 +740,7 @@ The sign_for command provides one signature for a multi-signed transaction.
 
 submit 
 `````````````````
-The submit method applies a transaction and sends it to the network to be confirmed and included in future ledgers.
+处理指定交易并将其提交到网络中进行确认以便打包进账本中。
 
 定义::
 
@@ -788,7 +788,7 @@ The submit method applies a transaction and sends it to the network to be confir
 
 tx 
 `````````````````
-The tx method retrieves information on a single transaction.
+获取指定的交易。
 
 定义::
 
