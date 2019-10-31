@@ -2,7 +2,7 @@ BitcoinABC API Docs
 ===========
 getbestblockhash
 ```````````
-Returns the hash of the best (tip) block in the longest block chain.
+获取链头区块哈希.
 
 定义::
 
@@ -24,35 +24,35 @@ Returns the hash of the best (tip) block in the longest block chain.
 
 getBlockByHash
 ```````````
-Get the block of the specified hash according to the block hash
+获取指定哈希的区块
 
 Return:
 
 .. code-block:: json
 
  {
-    "hash" : "hash",     (string) the block hash (same as provided)
-    "confirmations" : n,   (numeric) The number of confirmations, or -1 if the block is not on the main chain
-    "size" : n,            (numeric) The block size
-    "strippedsize" : n,    (numeric) The block size excluding witness data
-    "weight" : n           (numeric) The block weight as defined in BIP 141
-    "height" : n,          (numeric) The block height or index
-    "version" : n,         (numeric) The block version
-    "versionHex" : "00000000", (string) The block version formatted in hexadecimal
-    "merkleroot" : "xxxx", (string) The merkle root
-    "tx" : [               (array of string) The transaction ids
-        "transactionid"     (string) The transaction id
+    "hash" : "hash",     (string) 区块哈希
+    "confirmations" : n,   (numeric) 确认数
+    "size" : n,            (numeric) 区块字节数
+    "strippedsize" : n,    (numeric) 剔除隔离见证数据后的区块字节数
+    "weight" : n           (numeric) BIP141定义的区块权重
+    "height" : n,          (numeric) 区块高度
+    "version" : n,         (numeric) 版本
+    "versionHex" : "00000000", (string) 16进制表示的版本
+    "merkleroot" : "xxxx", (string) 区块的默克尔树根
+    "tx" : [               (array of string) 区块内所有交易组成的数组，成员为交易id
+        "transactionid"     (string) 交易id
         ,...
     ],
-    "time" : ttt,          (numeric) The block time in seconds since epoch (Jan 1 1970 GMT)
-    "mediantime" : ttt,    (numeric) The median block time in seconds since epoch (Jan 1 1970 GMT)
-    "nonce" : n,           (numeric) The nonce
+    "time" : ttt,          (numeric) 区块创建时间戳
+    "mediantime" : ttt,    (numeric) 区块中值时间戳
+    "nonce" : n,           (numeric) nonce值
     "bits" : "1d00ffff", (string) The bits
-    "difficulty" : x.xxx,  (numeric) The difficulty
-    "chainwork" : "xxxx",  (string) Expected number of hashes required to produce the chain up to this block (in hex)
-    "nTx" : n,             (numeric) The number of transactions in the block.
-    "previousblockhash" : "hash",  (string) The hash of the previous block
-    "nextblockhash" : "hash"       (string) The hash of the next block
+    "difficulty" : x.xxx,  (numeric) 难度
+    "chainwork" : "xxxx",  (string) 产生链到此区块所需的预期哈希
+    "nTx" : n,             (numeric) 区块内交易数量.
+    "previousblockhash" : "hash",  (string) 前一区块的哈希
+    "nextblockhash" : "hash"       (string) 下一区块的哈希
  }
 
 定义::
@@ -145,36 +145,36 @@ Return:
 
 getBlockByHeight
 ```````````
-Get the block of the specified hash according to the block height
+根据区块高度获取指定哈希的区块
 
 Return:
 
 .. code-block:: json
 
  {
-    "hash" : "hash",     (string) the block hash (same as provided)
-    "confirmations" : n,   (numeric) The number of confirmations, or -1 if the block is not on the main chain
-    "size" : n,            (numeric) The block size
-    "strippedsize" : n,    (numeric) The block size excluding witness data
-    "weight" : n           (numeric) The block weight as defined in BIP 141
-    "height" : n,          (numeric) The block height or index
-    "version" : n,         (numeric) The block version
-    "versionHex" : "00000000", (string) The block version formatted in hexadecimal
-    "merkleroot" : "xxxx", (string) The merkle root
-    "tx" : [               (array of string) The transaction ids
-        "transactionid"     (string) The transaction id
-        ,...
-    ],
-    "time" : ttt,          (numeric) The block time in seconds since epoch (Jan 1 1970 GMT)
-    "mediantime" : ttt,    (numeric) The median block time in seconds since epoch (Jan 1 1970 GMT)
-    "nonce" : n,           (numeric) The nonce
-    "bits" : "1d00ffff", (string) The bits
-    "difficulty" : x.xxx,  (numeric) The difficulty
-    "chainwork" : "xxxx",  (string) Expected number of hashes required to produce the chain up to this block (in hex)
-    "nTx" : n,             (numeric) The number of transactions in the block.
-    "previousblockhash" : "hash",  (string) The hash of the previous block
-    "nextblockhash" : "hash"       (string) The hash of the next block
-    }
+     "hash" : "hash",     (string) 区块哈希
+     "confirmations" : n,   (numeric) 确认数
+     "size" : n,            (numeric) 区块字节数
+     "strippedsize" : n,    (numeric) 剔除隔离见证数据后的区块字节数
+     "weight" : n           (numeric) BIP141定义的区块权重
+     "height" : n,          (numeric) 区块高度
+     "version" : n,         (numeric) 版本
+     "versionHex" : "00000000", (string) 16进制表示的版本
+     "merkleroot" : "xxxx", (string) 区块的默克尔树根
+     "tx" : [               (array of string) 区块内所有交易组成的数组，成员为交易id
+         "transactionid"     (string) 交易id
+         ,...
+     ],
+     "time" : ttt,          (numeric) 区块创建时间戳
+     "mediantime" : ttt,    (numeric) 区块中值时间戳
+     "nonce" : n,           (numeric) nonce值
+     "bits" : "1d00ffff", (string) The bits
+     "difficulty" : x.xxx,  (numeric) 难度
+     "chainwork" : "xxxx",  (string) 产生链到此区块所需的预期哈希
+     "nTx" : n,             (numeric) 区块内交易数量.
+     "previousblockhash" : "hash",  (string) 前一区块的哈希
+     "nextblockhash" : "hash"       (string) 下一区块的哈希
+  }
 
 定义::
 
@@ -266,26 +266,25 @@ Return:
 
 getBlockChainInfo
 ```````````
-Returns an object containing various state info regarding blockchain processing
+获取区块链当前状态
 
 Return:
 
 .. code-block:: json
 
  {
-    "chain": "xxxx",              (string) current network name as defined in BIP70 (main, test, regtest)
-    "blocks": xxxxxx,             (numeric) the current number of blocks processed in the server
-    "headers": xxxxxx,            (numeric) the current number of headers we have validated
-    "bestblockhash": "...",       (string) the hash of the currently best block
-    "difficulty": xxxxxx,         (numeric) the current difficulty
-    "mediantime": xxxxxx,         (numeric) median time for the current best block
-    "verificationprogress": xxxx, (numeric) estimate of verification progress [0..1]
-    "initialblockdownload": xxxx, (bool) (debug information) estimate of whether this node is in Initial Block Download mode.
-    "chainwork": "xxxx"           (string) total amount of work in active chain, in hexadecimal
-    "size_on_disk": xxxxxx,       (numeric) the estimated size of the block and undo files on disk
-    "pruned": xx,                 (boolean) if the blocks are subject to pruning
+    "chain": "xxxx",              (string) 区块链名称，可以是：main、test或regtest
+    "blocks": xxxxxx,             (numeric) 本地最优链中的已验证区块数量
+    "headers": xxxxxx,            (numeric) 本地最有区块头链表中的已验证区块头数量
+    "bestblockhash": "...",       (string) 本地最优链中最高区块的哈希
+    "difficulty": xxxxxx,         (numeric) 区块难度
+    "mediantime": xxxxxx,         (numeric) 最近区块之前的11个区块的中位时间
+    "verificationprogress": xxxx, (numeric) 区块验证进度，0.0~1.0
+    "chainwork": "xxxx"           (string) 产生链到此区块所需的预期哈希
+    "size_on_disk": xxxxxx,       (numeric) 磁盘上块和撤消文件的估计大小
+    "pruned": xx,                 (boolean) 块是否需要修剪
 
-    "warnings" : "...",           (string) any network and blockchain warnings.
+    "warnings" : "...",           (string) 区块链警告信息.
  }
 
 定义::
@@ -324,7 +323,7 @@ Return:
 
 getBlockCount
 ```````````
-Returns the number of blocks in the longest blockchain
+获取区块数量
 
 定义::
 
@@ -345,7 +344,7 @@ Returns the number of blocks in the longest blockchain
 
 getBlockHash
 ```````````
-Returns hash of block in best-block-chain at height provided
+获取指定高度区块的哈希
 
 定义::
 
@@ -366,7 +365,7 @@ Returns hash of block in best-block-chain at height provided
 
 getDifficulty
 ```````````
-Returns the proof-of-work difficulty as a multiple of the minimum difficulty
+获取出块难度
 
 定义::
 
@@ -388,9 +387,7 @@ Returns the proof-of-work difficulty as a multiple of the minimum difficulty
 
 getRawMemPool
 ```````````
-Returns all transaction ids in memory pool as a json array of string transaction ids
-
-Hint: use getmempoolentry to fetch a specific transaction from the mempool
+获取交易池详情
 
 定义::
 
@@ -420,35 +417,35 @@ Hint: use getmempoolentry to fetch a specific transaction from the mempool
 
 gettxout
 ```````````
-Returns details about an unspent transaction output
+获取交易输出信息
 
-Params:
+参数说明 :
 
-1."hash"             (string, required) UTXO‘s transaction id
+1."hash"             (必填项) UTXO所在的交易id
 
-2."vouth"                (numeric, required) UTXO serial number in the transaction output //long
+2."vouth"                (numeric, 必填项) UTXO在交易输出中的序号
 
-3."unconfirmed"  (boolean, optional) Whether to include the mempool. Default: false.     Note that an unspent output that is spent in the mempool won't appear.
+3."unconfirmed"  (boolean, 可选项) 是否显示在内存交易池中的未确认交易，默认值：false.
 
 Result:
 
 .. code-block:: json
 
  {
-  "bestblock":  "hash",    (string) The hash of the block at the tip of the chain
-  "confirmations" : n,       (numeric) The number of confirmations
-  "value" : x.xxx,           (numeric) The transaction value in BTC
+  "bestblock":  "hash",    (string) 本地最优链上该区块的哈希
+  "confirmations" : n,       (numeric) 所在交易的确认数
+  "value" : x.xxx,           (numeric) 该UTXO的面值
   "scriptPubKey" : {         (json object)
-     "asm" : "code",       (string)
-     "hex" : "hex",        (string)
-     "reqSigs" : n,          (numeric) Number of required signatures
-     "type" : "pubkeyhash", (string) The type, eg pubkeyhash
-     "addresses" : [          (array of string) array of bitcoin addresses
-        "address"     (string) bitcoin address
+     "asm" : "code",       (string)助记符表示的公钥脚本
+     "hex" : "hex",        (string)16进制表示的公钥脚本
+     "reqSigs" : n,          (numeric) 消费该UTXO需要的最少签名数量
+     "type" : "pubkeyhash", (string) 脚本类型
+     "addresses" : [          (array of string) 交易中使用的地址数组
+        "address"     (string) 比特币地址
         ,...
      ]
   },
-  "coinbase" : true|false   (boolean) Coinbase or not
+  "coinbase" : true|false   (boolean) 如果utxo所在交易是coinbase交易，则为true，否则为false
  }
 
 定义::
@@ -487,21 +484,21 @@ Result:
 
 getTxOutSetInfo
 ```````````
-Returns statistics about the unspent transaction output set,Note this call may take some time
+获取交易输出集信息
 
 Result:
 
 .. code-block:: json
 
  {
-    "height":n,     (numeric) The current block height (index)
-    "bestblock": "hex",   (string) The hash of the block at the tip of the chain
-    "transactions": n,      (numeric) The number of transactions with unspent outputs
-    "txouts": n,            (numeric) The number of unspent transaction outputs
-    "bogosize": n,          (numeric) A meaningless metric for UTXO set size
-    "hash_serialized_2": "hash", (string) The serialized hash
-    "disk_size": n,         (numeric) The estimated size of the chainstate on disk
-    "total_amount": x.xxx          (numeric) The total amount
+    "height":n,     (numeric) 本地最优链的高度
+    "bestblock": "hex",   (string) 最高位置区块的哈希
+    "transactions": n,      (numeric) 包含utxo的交易数量
+    "txouts": n,            (numeric) utxo总数
+    "bogosize": n,          (numeric) UTXO集大小的无意义指标
+    "hash_serialized_2": "hash", (string) 序列化哈希
+    "disk_size": n,         (numeric) 磁盘上链环状态的估计大小
+    "total_amount": x.xxx          (numeric) 总金额
   }
 
 定义::
@@ -535,7 +532,7 @@ Result:
 
 verifyChain
 ```````````
-Verifies blockchain database
+校验本地区块
 
 定义::
 
@@ -557,12 +554,12 @@ Verifies blockchain database
 
 verifyChainByParam
 ```````````
-Verifies blockchain database
+通过参数校验本地区块s
 
 Params:
-1. checklevel   (numeric, optional, 0-4, default=3) How thorough the block verification is
+1. checklevel   (numeric, 可选项) 指定检查的细致等级，0~4，默认值：3，等级越高 检查越细致
 
-2. nblocks      (numeric, optional, default=6, 0=all) The number of blocks to check
+2. nblocks      (numeric, 可选项) 要检查的区块数量，0表示检查所有区块，默认值：6
 
 定义::
 
@@ -586,24 +583,23 @@ Params:
 
 createMultiSig
 ```````````
-Creates a multi-signature address with n signature of m keys required,
-It returns a json object with the address and redeemScript
+创建多签地址与脚本
 
-Note this call may take some time
+该接口耗费时间略长
 
 Params
 
-1. nrequired                    (numeric, required) The number of required signatures out of the n keys
+1. nrequired                    (numeric, 必填项) 消费发往该地址的UTXO所需要的最少签名数
 
-2. "keys"                       (string, required) A json array of hex-encoded public keys
+2. "keys"                       (string, 必填项) 公钥或地址数组
 
 Result:
 
 .. code-block:: json
 
  {
-    "address":"multisigaddress",  (string) The value of the new multisig address
-    "redeemScript":"script"       (string) The string value of the hex-encoded redemption script
+    "address":"multisigaddress",  (string) 地址
+    "redeemScript":"script"       (string) 赎回脚本
   }
 
 定义::
@@ -631,7 +627,7 @@ Result:
 
 validateAddress
 ```````````
-Return information about the given bitcoin address
+验证地址有效性
 
 定义::
 
@@ -654,15 +650,15 @@ Return information about the given bitcoin address
 
 verifyMessage
 ```````````
-Verify a signed message
+验证消息签名
 
 Params
 
-1. "address"         (string, required) The bitcoin address to use for the signature
+1. "address"         (string, 必填项) 签名私钥对应的地址
 
-2. "signature"       (string, required) The signature provided by the signer in base 64 encoding (see signmessage)
+2. "signature"       (string, 必填项) Tbase64编码的签名
 
-3. "message"         (string, required) The message that was signed
+3. "message"         (string, 必填项) 原始消息
 
 
 定义::
@@ -686,56 +682,56 @@ Params
 
 queryTransactionInfo
 ```````````
-Query transaction information according to txid
+获取指定裸交易
 
 Return:
 
 .. code-block:: json
 
  {
-    "in_active_chain": b, (bool) Whether specified block is in the active chain or not (only present with explicit "blockhash" argument)
-    "hex" : "data",       (string) The serialized, hex-encoded data for 'txid'
-    "txid" : "id",        (string) The transaction id (same as provided)
-    "hash" : "id",        (string) The transaction hash (differs from txid for witness transactions)
-    "size" : n,             (numeric) The serialized transaction size
-    "vsize" : n,            (numeric) The virtual transaction size (differs from size for witness transactions)
-    "weight" : n,           (numeric) The transaction's weight (between vsize*4-3 and vsize*4)
-    "version" : n,          (numeric) The version
-    "locktime" : ttt,       (numeric) The lock time
+    "in_active_chain": b, (bool) 指定的块是否在活动链中
+    "hex" : "data",       (string) 交易id的16进制值
+    "txid" : "id",        (string) 交易id
+    "hash" : "id",        (string) 交易啥希
+    "size" : n,             (numeric) 序列化的交易大小
+    "vsize" : n,            (numeric) 虚拟的交易大小
+    "weight" : n,           (numeric) 交易重量
+    "version" : n,          (numeric) 版本
+    "locktime" : ttt,       (numeric) 锁定时间
     "vin" : [               (array of json objects)
         {
-        "txid": "id",    (string) The transaction id
+        "txid": "id",    (string) 交易id
         "vout": n,         (numeric)
-        "scriptSig": {     (json object) The script
+        "scriptSig": {     (json object) 脚本
             "asm": "asm",  (string) asm
             "hex": "hex"   (string) hex
         },
-        "sequence": n      (numeric) The script sequence number
-        "txinwitness": ["hex", ...] (array of string) hex-encoded witness data (if any)
+        "sequence": n      (numeric) 脚本序列号
+        "txinwitness": ["hex", ...] (array of string)
         }
         ,...
     ],
     "vout" : [              (array of json objects)
         {
-        "value" : x.xxx,            (numeric) The value in BTC
+        "value" : x.xxx,            (numeric) 交易数量
         "n" : n,                    (numeric) index
         "scriptPubKey" : {          (json object)
             "asm" : "asm",          (string) the asm
             "hex" : "hex",          (string) the hex
-            "reqSigs" : n,            (numeric) The required sigs
+            "reqSigs" : n,            (numeric) 需要签名的数量
             "type" : "pubkeyhash",  (string) The type, eg 'pubkeyhash'
             "addresses" : [           (json array of string)
-            "address"        (string) bitcoin address
+            "address"        (string) 地址
             ,...
             ]
         }
         }
         ,...
     ],
-    "blockhash" : "hash",   (string) the block hash
-    "confirmations" : n,      (numeric) The confirmations
-    "time" : ttt,             (numeric) The transaction time in seconds since epoch (Jan 1 1970 GMT)
-    "blocktime" : ttt         (numeric) The block time in seconds since epoch (Jan 1 1970 GMT)
+    "blockhash" : "hash",   (string) 区块哈希
+    "confirmations" : n,      (numeric) 确认数
+    "time" : ttt,             (numeric) 交易时间秒数
+    "blocktime" : ttt         (numeric) 块时间秒数
  }
 
 定义::
@@ -806,9 +802,7 @@ Return:
 
 decodeRawTransaction
 ```````````
-Return a JSON object representing the serialized, hex-encoded transaction.
-
-Also see createrawtransaction and signrawtransaction calls
+解码裸交易
 
 定义::
 
@@ -826,42 +820,43 @@ Also see createrawtransaction and signrawtransaction calls
   "message": "success",
  "data": {
        {
-  "txid" : "id",        (string) The transaction id
-  "hash" : "id",        (string) The transaction hash (differs from txid for witness transactions)
-  "size" : n,             (numeric) The transaction size
-  "vsize" : n,            (numeric) The virtual transaction size (differs from size for witness transactions)
-  "weight" : n,           (numeric) The transaction's weight (between vsize*4 - 3 and vsize*4)
-  "version" : n,          (numeric) The version
-  "locktime" : ttt,       (numeric) The lock time
-  "vin" : [               (array of json objects)
-     {
-       "txid": "id",    (string) The transaction id
-       "vout": n,         (numeric) The output number
-       "scriptSig": {     (json object) The script
-         "asm": "asm",  (string) asm
-         "hex": "hex"   (string) hex
-       },
-       "txinwitness": ["hex", ...] (array of string) hex-encoded witness data (if any)
-       "sequence": n     (numeric) The script sequence number
-     }
-     ,...
-  ],
-  "vout" : [             (array of json objects)
-     {
-       "value" : x.xxx,            (numeric) The value in BTC
-       "n" : n,                    (numeric) index
-       "scriptPubKey" : {          (json object)
-         "asm" : "asm",          (string) the asm
-         "hex" : "hex",          (string) the hex
-         "reqSigs" : n,            (numeric) The required sigs
-         "type" : "pubkeyhash",  (string) The type, eg 'pubkeyhash'
-         "addresses" : [           (json array of string)
-           "12tvKAXCxZjSmdNbao16dKXC8tRWfcF5oc"   (string) BTC address
-         ]
-       }
-     }
-     ,...
-  ],
+          "txid" : "id",        (string) 交易id
+          "hash" : "id",        (string) 交易啥希
+          "size" : n,             (numeric) 序列化的交易大小
+          "vsize" : n,            (numeric) 虚拟的交易大小
+          "weight" : n,           (numeric) 交易重量
+          "version" : n,          (numeric) 版本
+          "locktime" : ttt,       (numeric) 锁定时间
+          "vin" : [               (array of json objects)
+              {
+              "txid": "id",    (string) 交易id
+              "vout": n,         (numeric)
+              "scriptSig": {     (json object) 脚本
+                  "asm": "asm",  (string) asm
+                  "hex": "hex"   (string) hex
+              },
+              "sequence": n      (numeric) 脚本序列号
+              "txinwitness": ["hex", ...] (array of string)
+              }
+              ,...
+          ],
+          "vout" : [              (array of json objects)
+              {
+              "value" : x.xxx,            (numeric) 交易数量
+              "n" : n,                    (numeric) index
+              "scriptPubKey" : {          (json object)
+                  "asm" : "asm",          (string) the asm
+                  "hex" : "hex",          (string) the hex
+                  "reqSigs" : n,            (numeric) 需要签名的数量
+                  "type" : "pubkeyhash",  (string) The type, eg 'pubkeyhash'
+                  "addresses" : [           (json array of string)
+                  "address"        (string) 地址
+                  ,...
+                  ]
+              }
+              }
+              ,...
+          ],
     }
   }
  }
