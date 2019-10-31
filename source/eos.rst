@@ -403,3 +403,69 @@ get_currency_balance
       "2.9626 EOS"
     ]
   }
+
+hasContract
+`````````````````
+检测地址是否是合约账户
+
+定义::
+
+    GET /eos/hasContract?address={address}
+    
+请求示例::
+
+    GET /eos/hasContract?address=test11111111
+
+返回:
+
+.. code-block:: json
+
+  {
+    "status": 0,
+    "message": "success",
+    "data": false
+  }
+
+eosSign
+`````````````````
+使用传入的秘钥对数据进行签名
+
+定义::
+
+    GET /eos/eosSign?data={data}&privateKey={privateKey}
+    
+请求示例::
+
+    GET /eos/eosSign?data=123123123123123&privateKey=5J3yf2qU69i2CX8JQaPwM5PtvJ41bB1Dc7rRqFafzxjrW2wxvV6
+
+返回:
+
+.. code-block:: json
+
+  {
+    "status": 0,
+    "message": "success",
+    "data": "SIG_K1_K9NP9aggyTJexCvr6Jz3bDvPC1kjyLb9AhU79nP4XLqHdX9Ep7xfZFNEMCj1y1DU8z3qqQUmRUkeYErXmhHN9bNNTpS5of"
+  }
+
+eosSign
+`````````````````
+使用公钥对已经签名的数据进行验证
+
+定义::
+
+    GET /eos/eosVerifySign?data={data}&signature={signature}&publicKey={publicKey}
+    
+请求示例::
+
+    GET /eos/eosVerifySign?data=123123123123123&signature=SIG_K1_K9NP9aggyTJexCvr6Jz3bDvPC1kjyLb9AhU79nP4XLqHdX9Ep7xfZFNEMCj1y1DU8z3qqQUmRUkeYErXmhHN9bNNTpS5of&publicKey=EOS8Q84bT1Luyk32z6NKrnpjwstN9DKmNvo8gt9om4X15Ky2p2Bik
+
+返回:
+
+.. code-block:: json
+
+  {
+    "status": 0,
+    "message": "success",
+    "data": true
+  }
