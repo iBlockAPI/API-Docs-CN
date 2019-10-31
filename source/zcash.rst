@@ -1,13 +1,9 @@
 Zcash API Docs
 ===========
-Zcash is a privacy-protecting, digital currency built on strong science. `Official website`_.
-
-.. _Official website: https://z.cash/
-
 
 getbestblockhash
 `````````````````
-Returns the hash of the best (tip) block in the longest block chain.
+返回最新块区块的Hash。
 
 定义::
 
@@ -29,7 +25,7 @@ Returns the hash of the best (tip) block in the longest block chain.
 
 getBlockByBlockHeight
 ``````````````````````
-getblock "height"
+获取区块高度。
 
 定义::
 
@@ -115,7 +111,7 @@ getblock "height"
     
 getBlockByBlockHash
 `````````````````
-getblock "hash"
+根据区块Hash获取区块详情。
 
 定义::
 
@@ -201,7 +197,7 @@ getblock "hash"
 
 getblockcount
 `````````````````
-Returns the number of blocks in the best valid block chain.
+返回有效区块数目。
 
 定义::
 
@@ -223,7 +219,7 @@ Returns the number of blocks in the best valid block chain.
 
 getrawtransaction
 `````````````````
-By default this function only works sometimes. This is when the tx is in the mempool or there is an unspent output in the utxo for this transaction.
+调用提取指定id的裸交易字符串或解码后的JSON对象。
 
 定义::
 
@@ -314,7 +310,7 @@ By default this function only works sometimes. This is when the tx is in the mem
     
 decoderawtransaction
 `````````````````
-Return a JSON object representing the serialized, hex-encoded transaction.
+将16进制编码的交易解码成json格式。
 
 定义::
 
@@ -400,7 +396,7 @@ Return a JSON object representing the serialized, hex-encoded transaction.
     
 sendRawTransaction
 `````````````````
-Submits raw transaction (serialized, hex-encoded) to local node and network.
+提交并广播交易。
 
 定义::
 
@@ -422,7 +418,7 @@ Submits raw transaction (serialized, hex-encoded) to local node and network.
     
 validateaddress
 `````````````````
-Return information about the given Zcash address.
+校验zcash地址是否正确。
 
 定义::
 
