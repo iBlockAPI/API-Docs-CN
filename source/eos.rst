@@ -448,7 +448,7 @@ eosSign
     "data": "SIG_K1_K9NP9aggyTJexCvr6Jz3bDvPC1kjyLb9AhU79nP4XLqHdX9Ep7xfZFNEMCj1y1DU8z3qqQUmRUkeYErXmhHN9bNNTpS5of"
   }
 
-eosSign
+eosVerifySign
 `````````````````
 使用公钥对已经签名的数据进行验证
 
