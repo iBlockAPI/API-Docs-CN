@@ -11,7 +11,7 @@ ethGetTransactionReceipt
     
 请求示例::
 
-    /eth/ethGetTransactionReceipt?txHash=0x2fd36a4d0ac98e2c01ed3669835927cb1a18375d8bf97e09ac2f4cc287687743
+    GET /eth/ethGetTransactionReceipt?txHash=0x2fd36a4d0ac98e2c01ed3669835927cb1a18375d8bf97e09ac2f4cc287687743
 
 返回:
 
