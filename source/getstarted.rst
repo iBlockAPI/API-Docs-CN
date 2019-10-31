@@ -17,4 +17,10 @@
 
 .. code-block:: bash
 
-    curl  https://api.iblockapi.com?apiKey="Your APIKey"
+    curl  https://api.iblockapi.com?apiKey='你的 APIKey' "https://api.iblockapi.com/btc/queryTransactionInfo?txId=6f54fcaec5553af2284da5917f52be3a82295531508886a254ff767a36ae73cd"
+
+OR
+
+.. code-block:: bash
+
+    curl "https://api.iblockapi.com/btc/queryTransactionInfo?txId=6f54fcaec5553af2284da5917f52be3a82295531508886a254ff767a36ae73cd&apiKey=你的 APIKey"
