@@ -7,11 +7,11 @@ ethGetTransactionReceipt
 
 定义::
 
-    GET /eth/ethGetTransactionReceipt?txHash=0x2fd36a4d0ac98e2c01ed3669835927cb1a18375d8bf97e09ac2f4cc287687743
+    GET /eth/ethGetTransactionReceipt?txHash={txHash}
     
 请求示例::
 
-    curl -X GET --header 'Accept: application/json' 'http://localhost:8080/eth/ethGetTransactionReceipt?txHash=0x2fd36a4d0ac98e2c01ed3669835927cb1a18375d8bf97e09ac2f4cc287687743'
+    GET /eth/ethGetTransactionReceipt?txHash=0x2fd36a4d0ac98e2c01ed3669835927cb1a18375d8bf97e09ac2f4cc287687743
 
 返回:
 
@@ -49,11 +49,11 @@ ethGetTransactionByHash
 
 定义::
 
-    GET /eth/ethGetTransactionByHash?txHash=0x2fd36a4d0ac98e2c01ed3669835927cb1a18375d8bf97e09ac2f4cc287687743
+    GET /eth/ethGetTransactionByHash?txHash={txHash}
     
 请求示例::
 
-    curl -X GET --header 'Accept: application/json' 'http://localhost:8080/eth/ethGetTransactionByHash?txHash=0x2fd36a4d0ac98e2c01ed3669835927cb1a18375d8bf97e09ac2f4cc287687743'
+    GET /eth/ethGetTransactionByHash?txHash=0x2fd36a4d0ac98e2c01ed3669835927cb1a18375d8bf97e09ac2f4cc287687743
 
 返回:
 
@@ -128,11 +128,11 @@ ethGetBlockByHash
 
 定义::
 
-    GET /eth/ethGetBlockByHash?txHash=0x9de9fa4172199ad230af553ac26ffa6b10f2d896d61a5e71f3f30dea5da62d65
+    GET /eth/ethGetBlockByHash?txHash={txHash}
     
 请求示例::
 
-    curl -X GET --header 'Accept: application/json' 'http://localhost:8080/eth/ethGetBlockByHash?txHash=0x9de9fa4172199ad230af553ac26ffa6b10f2d896d61a5e71f3f30dea5da62d65'
+    GET /eth/ethGetBlockByHash?txHash=0x9de9fa4172199ad230af553ac26ffa6b10f2d896d61a5e71f3f30dea5da62d65
 
 返回:
 
@@ -233,11 +233,11 @@ ethGetBlockByNumber
 
 定义::
 
-    GET /eth/ethGetBlockByNumber?number=8795764
+    GET /eth/ethGetBlockByNumber?number={number}
     
 请求示例::
 
-    curl -X GET --header 'Accept: application/json' 'http://localhost:8080/eth/ethGetBlockByNumber?number=8795764'
+    GET /eth/ethGetBlockByNumber?number=8795764
 
 返回:
 
@@ -338,11 +338,11 @@ ethGetBalance
 
 定义::
 
-    GET /eth/ethGetBalance?address=0xea674fdde714fd979de3edf0f56aa9716b898ec8
+    GET /eth/ethGetBalance?address={address}
     
 请求示例::
 
-    curl -X GET --header 'Accept: application/json' 'http://localhost:8080/eth/ethGetBalance?address=0xea674fdde714fd979de3edf0f56aa9716b898ec8'
+    GET /eth/ethGetBalance?address=0xea674fdde714fd979de3edf0f56aa9716b898ec8
 
 返回:
 
@@ -365,7 +365,7 @@ ethBlockNumber
     
 请求示例::
 
-    curl -X GET --header 'Accept: application/json' 'http://localhost:8080/eth/ethBlockNumber'
+    GET /eth/ethBlockNumber
 
 返回:
 
