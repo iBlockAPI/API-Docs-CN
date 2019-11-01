@@ -20,6 +20,7 @@ import sys
 project = '<a href="https://iblockapi.com/">iBlockAPI文档中文版</a>'
 copyright = '2019'
 author = 'iBlockAPI'
+html_title = 'iBlockAPI文档中文版'
 
 # The full version, including alpha/beta/rc tags
 release = '0.1'
