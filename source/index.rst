@@ -8,9 +8,9 @@ Rest API
 
 - 概览
     
-  本文档指导开发者如何使用iBlockAPI.
+  本文档指导开发者如何使用iBlockAPI。
 
-- Base URL
+- 基本URL
 
   本文中所有接口的基本URL为：
 

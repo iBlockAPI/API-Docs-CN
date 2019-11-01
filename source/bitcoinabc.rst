@@ -2,7 +2,7 @@ BitcoinABC API Docs
 ===========
 getbestblockhash
 ```````````
-获取链头区块哈希.
+获取最新区块哈希。
 
 定义::
 
@@ -24,7 +24,7 @@ getbestblockhash
 
 getBlockByHash
 ```````````
-获取指定哈希的区块
+获取指定哈希的区块。
 
 Return:
 
@@ -145,7 +145,7 @@ Return:
 
 getBlockByHeight
 ```````````
-根据区块高度获取指定哈希的区块
+根据区块高度获取区块。
 
 Return:
 
@@ -266,7 +266,7 @@ Return:
 
 getBlockChainInfo
 ```````````
-获取区块链当前状态
+获取区块链当前状态。
 
 Return:
 
@@ -323,7 +323,7 @@ Return:
 
 getBlockCount
 ```````````
-获取区块数量
+获取区块数量。
 
 定义::
 
@@ -344,7 +344,7 @@ getBlockCount
 
 getBlockHash
 ```````````
-获取指定高度区块的哈希
+获取指定高度区块的哈希。
 
 定义::
 
@@ -365,7 +365,7 @@ getBlockHash
 
 getDifficulty
 ```````````
-获取出块难度
+获取出块难度。
 
 定义::
 
@@ -387,7 +387,7 @@ getDifficulty
 
 getRawMemPool
 ```````````
-获取交易池详情
+获取交易池详情。
 
 定义::
 
@@ -417,7 +417,7 @@ getRawMemPool
 
 gettxout
 ```````````
-获取交易输出信息
+获取交易输出信息。
 
 参数说明 :
 
@@ -484,7 +484,7 @@ Result:
 
 getTxOutSetInfo
 ```````````
-获取交易输出集信息
+获取交易输出集信息。
 
 Result:
 
@@ -532,7 +532,7 @@ Result:
 
 verifyChain
 ```````````
-校验本地区块
+校验本地区块。
 
 定义::
 
@@ -554,7 +554,7 @@ verifyChain
 
 verifyChainByParam
 ```````````
-通过参数校验本地区块s
+通过参数校验本地区块。
 
 Params:
 1. checklevel   (numeric, 可选项) 指定检查的细致等级，0~4，默认值：3，等级越高 检查越细致
@@ -583,9 +583,9 @@ Params:
 
 createMultiSig
 ```````````
-创建多签地址与脚本
+创建多签地址与脚本。
 
-该接口耗费时间略长
+该接口耗费时间略长。
 
 Params
 
@@ -628,7 +628,7 @@ Result:
 
 validateAddress
 ```````````
-验证地址有效性
+验证地址有效性。
 
 定义::
 
@@ -652,7 +652,7 @@ validateAddress
 
 verifyMessage
 ```````````
-验证消息签名
+验证消息签名。
 
 Params
 
@@ -685,7 +685,7 @@ Params
 
 queryTransactionInfo
 ```````````
-获取指定裸交易
+获取指定裸交易。
 
 Return:
 
@@ -807,7 +807,7 @@ Return:
 
 decodeRawTransaction
 ```````````
-解码裸交易
+解码裸交易。
 
 定义::
 

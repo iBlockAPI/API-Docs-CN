@@ -973,7 +973,7 @@ listPlugins
 
 sendRawTransaction
 ```````````
-广播交易。
+广播裸交易。
 
 定义::
 

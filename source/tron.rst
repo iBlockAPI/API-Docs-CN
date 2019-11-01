@@ -103,7 +103,7 @@ getNowBlock
 
 getBlockByNum
 ```````````
-通过高度查询块
+通过高度查询块。
 
 定义::
 
@@ -204,7 +204,7 @@ getBlockByNum
 
 getBlockById
 ```````````
-通过ID(Hash)查询块
+通过ID(Hash)查询块。
 
 定义::
 
@@ -305,7 +305,7 @@ getBlockById
 
 queryTransactionByTxHash
 ```````````
-通过ID(Hash)查询交易
+通过ID(Hash)查询交易。
 
 定义::
 
@@ -356,7 +356,7 @@ queryTransactionByTxHash
 
 queryTransactioninfoByHash
 ```````````
-根据ID(Hash)查询交易的fee，所在的block
+根据ID(Hash)查询交易的fee和所在的块。
 
 定义::
 
@@ -389,7 +389,7 @@ queryTransactioninfoByHash
 
 validateAddress
 ```````````
-检查地址是否正确
+检查地址是否正确。
 
 定义::
 
@@ -411,7 +411,7 @@ validateAddress
 
 getAccount
 ```````````
-查询一个账号的信息
+查询一个账号的信息。
 
 定义::
 
@@ -463,7 +463,7 @@ getAccount
 
 getAccountNet
 ```````````
-查询账户的资源信息
+查询账户的资源信息。
 
 定义::
 
@@ -500,7 +500,7 @@ getAccountNet
 
 getAssetIssueById
 ```````````
-根据id查询token信息
+根据id查询token信息。
 
 定义::
 

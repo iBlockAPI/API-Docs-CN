@@ -2,7 +2,7 @@ Monero API Docs
 ===========
 getBlockCount
 ```````````
-查找节点已知的最长链中有多少个块
+查找节点已知的最长链中有多少个块。
 
 定义::
 
@@ -31,7 +31,7 @@ getBlockCount
 
 onGetblockhash
 ```````````
-通过高度查看区块的哈希值
+通过高度查看区块的哈希值。
 
 定义::
 
@@ -58,7 +58,7 @@ onGetblockhash
 
 getLastBlockHeader
 ```````````
-使用此方法可轻松检索最新块的块头信息
+使用此方法可轻松检索最新块的块头信息。
 
 定义::
 
@@ -136,7 +136,7 @@ getLastBlockHeader
 getBlockHeaderByHash
 ```````````
 可以使用块的哈希值或高度来检索块头信息。
-此方法包括将块的哈希作为输入参数来检索有关该块的基本信息
+此方法包括将块的哈希作为输入参数来检索有关该块的基本信息。
 
 
 定义::
@@ -193,7 +193,7 @@ getBlockHeaderByHash
 
 getBlockHeaderByHeight
 ```````````
-此方法将块的高度作为输入参数来检索有关该块的基本信息
+此方法将块的高度作为输入参数来检索有关该块的基本信息。
 
 定义::
 
@@ -328,7 +328,7 @@ getBlockHeadersRange
 
 getBlockByHeight
 ```````````
-完整的块信息可通过块高度检索
+完整的块信息可通过块高度检索。
 
 
 定义::
@@ -387,7 +387,7 @@ getBlockByHeight
 
 getBlockByHash
 ```````````
-完整的区块信息可通过区块哈希检索
+通过区块Hash获取区块信息。
 
 
 定义::
@@ -445,7 +445,7 @@ getBlockByHash
 
 getFeeEstimate
 ```````````
-估算每字节费用
+估算每字节费用。
 
 定义::
 
@@ -486,7 +486,7 @@ getFeeEstimate
 
 getHeight
 ```````````
-获取节点的当前高度
+获取节点的当前高度。
 
 定义::
 
@@ -516,7 +516,7 @@ getHeight
 
 getTransactions
 ```````````
-通过哈希查找一个或多个交易
+通过哈希查找一个或多个交易。
 
 
 定义::
@@ -587,7 +587,7 @@ getTransactions
 
 getAltBlocksHashes
 ```````````
-获取不在主链上的已知块散列
+获取不在主链上的已知块hash。
 
 定义::
 
@@ -636,7 +636,7 @@ getAltBlocksHashes
 
 isKeyImageSpent
 ```````````
-使用与输出关联的关键图像检查输出是否已用完
+使用与输出关联的关键图像检查输出是否已用完.
 
 定义::
 
@@ -670,7 +670,7 @@ isKeyImageSpent
 
 sendRawTransaction
 ```````````
-向网络广播原始交易
+向网络广播裸交易。
 
 定义::
 

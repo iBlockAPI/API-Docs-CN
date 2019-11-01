@@ -2,7 +2,7 @@ Litecoin API Docs
 ===========
 getBestBlockHash
 ```````````
-返回本地最优链上最后一个区块的哈希
+返回本地最长链上最后一个区块的哈希。
 
 定义::
 
@@ -24,7 +24,7 @@ getBestBlockHash
 
 getBlockByHash
 ```````````
-根据区块hash返回指定区块
+根据区块hash返回指定区块。
 
 定义::
 
@@ -113,7 +113,7 @@ getBlockByHash
 
 getBlockByHeight
 ```````````
-根据区块高度返回指定哈希的区块
+根据区块高度返回指定区块。
 
 定义::
 
@@ -193,7 +193,7 @@ getBlockByHeight
 
 getBlockChainInfo
 ```````````
-返回区块链的当前状态
+返回区块链的当前状态。
 
 定义::
 
@@ -315,7 +315,7 @@ getBlockChainInfo
 
 getBlockCount
 ```````````
-返回本地最优链中的区块数量
+返回本地最长链中的区块数量。
 
 定义::
 
@@ -336,7 +336,7 @@ getBlockCount
 
 getBlockHash
 ```````````
-返回在本地最优链中指定高度区块的哈希
+返回在本地最长链中指定高度区块的哈希。
 
 定义::
 
@@ -357,7 +357,7 @@ getBlockHash
 
 getDifficulty
 ```````````
-返回当前的出块难度
+返回当前的出块难度。
 
 定义::
 
@@ -379,7 +379,7 @@ getDifficulty
 
 getRawMemPool
 ```````````
-返回节点交易池中的所有交易
+返回节点交易池中的所有交易。
 
 定义::
 
@@ -406,7 +406,7 @@ getRawMemPool
 
 gettxout
 ```````````
-返回一个UTXO的详细信息
+返回一个UTXO的详细信息。
 
 Params:
 
@@ -474,7 +474,7 @@ Params:
 
 getTxOutSetInfo
 ```````````
-返回确认的UTXO集合的统计信息。注意该调用 的执行可能需要一定时间，而且该调用只会计算来自确认交易的输出， 它不会考虑来自交易池的输出
+返回确认的UTXO集合的统计信息。注意该调用 的执行可能需要一定时间，而且该调用只会计算来自确认交易的输出， 它不会考虑来自交易池的输出。
 
 
 定义::
@@ -523,7 +523,7 @@ getTxOutSetInfo
 
 verifyChain
 ```````````
-验证本地区块链数据库中的每个成员
+验证本地区块链数据库中的数据。
 
 定义::
 
@@ -545,7 +545,7 @@ verifyChain
 
 verifyChainByParam
 ```````````
-通过参数验证本地区块链数据库中的每个成员
+通过参数验证本地区块链数据库中的数据。
 
 Params:
 1. checklevel   （数字，可选，0-4，默认值= 3）块验证的彻底程度
@@ -574,7 +574,7 @@ Params:
 
 createMultiSig
 ```````````
-创建一个P2SH多重签名地址
+创建一个P2SH多重签名地址。
 
 Params
 
@@ -618,7 +618,7 @@ Example Request:
 
 estimateSmartFee
 ```````````
-估算交易经几个区块确认所需的每千字节的交易费，并获取估算时找到的区块数
+估算交易经几个区块确认所需的每千字节的交易费，并获取估算时找到的区块数。
 
 
 定义::
@@ -657,7 +657,7 @@ Example Request:
 
 validateAddress
 ```````````
-验证地址是否有效
+验证地址是否有效。
 
 定义::
 
@@ -680,7 +680,7 @@ Example Request:
 
 verifyMessage
 ```````````
-验证消息签名
+验证消息签名。
 
 Params
 
@@ -713,7 +713,7 @@ Example Request:
 
 queryTransactionInfo
 ```````````
-根据交易id查询交易详情
+根据交易id查询交易详情。
 
 定义::
 
@@ -837,7 +837,7 @@ Example Request:
 
 decodeRawTransaction
 ```````````
-解码裸交易
+解码裸交易。
 
 定义::
 

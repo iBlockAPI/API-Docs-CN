@@ -1,13 +1,13 @@
 Stellar API Docs
 ===========
-恒星币是一个受保护的加密数字货币.
+恒星币是一个受保护的加密数字货币。
 
 .. _官网地址: https://www.stellar.org/
 
 
 accountBalance
 `````````````````
-查询账号余额.
+查询账号余额。
 
 定义::
 
@@ -29,7 +29,7 @@ accountBalance
 
 accountInfo
 `````````````````
-查询账号信息.
+查询账号信息。
 
 定义::
 
@@ -85,7 +85,7 @@ accountInfo
 
 checkAccount
 `````````````````
-查询账号有效性(是否完成注册).
+查询账号有效性(是否完成注册)。
 
 定义::
 
@@ -107,7 +107,7 @@ checkAccount
 
 getTransaction
 `````````````````
-查询交易信息.
+查询交易信息。
 
 定义::
 
@@ -149,7 +149,7 @@ getTransaction
 
 getAccountTransactions
 `````````````````
-查询指定账号的交易数据.
+查询指定账号的交易数据。
 
 定义::
 

@@ -2,7 +2,7 @@ Cardano API Docs
 ===========
 validateAddress
 ```````````
-检查地址是否正确
+检查地址是否正确。
 
 定义::
 
@@ -24,7 +24,7 @@ validateAddress
 
 getAddressInfo
 ```````````
-根据地址获取信息
+根据地址获取信息。
 
 定义::
 
@@ -95,7 +95,7 @@ getAddressInfo
 
 getBlockByHash
 ```````````
-通过区块Hash获取区块的摘要信息
+通过区块Hash获取区块的摘要信息。
 
 定义::
 
@@ -139,7 +139,7 @@ getBlockByHash
 
 getBlockByEpochAndSlot
 ```````````
-通过区块epoch和slot获取区块的摘要信息
+通过区块epoch和slot获取区块的摘要信息。
 
 定义::
 
@@ -180,7 +180,7 @@ getBlockByEpochAndSlot
 
 getBlockTxsByHash
 ```````````
-根据区块Hash获取区块上的交易信息
+根据区块Hash获取区块上的交易信息。
 
 定义::
 
@@ -323,7 +323,7 @@ getBlockTxsByHash
 
 getLastTransactions
 ```````````
-获取最新的20条交易记录
+获取最新的20条交易记录。
 
 定义::
 
@@ -378,7 +378,7 @@ getLastTransactions
 
 queryTransactionByTxHash
 ```````````
-通过Id(Hash)获取交易信息
+通过Id(Hash)获取交易信息。
 
 定义::
 

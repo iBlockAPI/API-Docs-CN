@@ -45,7 +45,7 @@ ethGetTransactionReceipt
 
 ethGetTransactionByHash
 `````````````````
-方法返回具有指定哈希值的交易对象。
+返回具有指定哈希值的交易对象。
 
 定义::
 
@@ -229,7 +229,7 @@ ethGetBlockByHash
 
 ethGetBlockByNumber
 `````````````````
-方法返回指定块编号对应的块。
+返回指定块编号对应的块。
 
 定义::
 
@@ -334,7 +334,7 @@ ethGetBlockByNumber
 
 ethGetBalance
 `````````````````
-方法用来获取指定块中特定账户地址的余额。
+用来获取指定块中特定账户地址的余额。
 
 定义::
 
