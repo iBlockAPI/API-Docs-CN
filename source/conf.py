@@ -17,7 +17,7 @@ import sys
 
 # -- Project information -----------------------------------------------------
 
-project = 'iBlockAPI文档中文版<a href="https://iblockapi.com/">'
+project = '<a href="https://iblockapi.com/">iBlockAPI文档中文版</a>'
 copyright = '2019'
 author = 'iBlockAPI'
 
