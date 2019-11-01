@@ -20,7 +20,7 @@ Rest API
 
 - 认证
 
-  本文所有请求，都受API Key 保护。用户可以在网站中创建应用，得到一个API Key，使用示例：
+  本文所有请求，都受API Key 保护。用户可以在网站中申请，得到一个API Key，使用示例：
 
   .. code-block:: bash
 
