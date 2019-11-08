@@ -8,7 +8,7 @@
 
 .. code-block:: bash
 
-    https://api.iblockapi.com/
+    https://api.iblockapi.com/swagger-ui.html
 
 认证
 ``````````````````````
